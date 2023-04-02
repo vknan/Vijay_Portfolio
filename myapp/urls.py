@@ -4,7 +4,7 @@ urlpatterns = [
     path('', views.home, name = 'home'),
     path('about/', views.about, name = 'about'),
     path('services/', views.services, name = 'services'),
-    path('portfolio/', views.portfolio, name = 'portfolio'),
+    path('Templates/', views.Templates, name = 'Templates'),
     path('blog/', views.blog, name = 'blog'),
     path('contact/', views.contact, name = 'contact'),
     path('user/register/', views.register, name = 'register'),
@@ -13,4 +13,5 @@ urlpatterns = [
     path('blog_single/<str:title>/', views.blog_single, name = 'blog_single'),
     path('search/', views.search, name = 'search'),
     path('comment/', views.post_comment, name = 'comment'),
+    path('pricing/', views.pricing, name = 'pricing'),
 ]

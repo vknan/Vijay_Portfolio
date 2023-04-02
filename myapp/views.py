@@ -83,8 +83,8 @@ def about(request):
 def services(request):
     return render(request, 'services.html')
 
-def portfolio(request):
-    return render(request, 'portfolio.html')
+def Templates(request):
+    return render(request, 'Templates.html')
 
 def blog(request):
     # posts = Post.objects.filter(is_published=True)
@@ -93,12 +93,12 @@ def blog(request):
     if category_name:
         
         posts = Post.objects.filter(is_published=True, category__name=category_name)
-        paginator = Paginator(posts, 1)
+        paginator = Paginator(posts, 2)
         page = request.GET.get('page')
         posts = paginator.get_page(page)
     else:
         posts = Post.objects.filter(is_published=True)
-        paginator = Paginator(posts, 1)
+        paginator = Paginator(posts, 2)
         page = request.GET.get('page')
         posts = paginator.get_page(page)
     Categories = Category.objects.all()
@@ -158,3 +158,8 @@ def post_comment(request):
 
     
     return redirect('blog')
+
+
+
+def pricing(request):
+    return render(request, 'pricing.html')

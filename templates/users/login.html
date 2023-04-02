@@ -26,7 +26,7 @@
         {% for message in messages %}
         <h3>{{message}}</h3>
         {% endfor %}
-        <form class="login-form" method="POST"action="{% url 'login' %}">
+        <form class="login-form" method="POST" action="{% url 'login' %}">
 			{% csrf_token %}
             <input type="text" name = "username" placeholder="username" />
             <input type="password" name = "password" placeholder="password" />
