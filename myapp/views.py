@@ -3,7 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from .models import Feature, Post, Category, Comment, Contact
+from .models import Feature, Post, Category, Comment, Contact, Product
 from django.core.paginator import Paginator
 
 
@@ -84,7 +84,9 @@ def services(request):
     return render(request, 'services.html')
 
 def Templates(request):
-    return render(request, 'Templates.html')
+    p1 = Product.objects.all()
+    context = {'products': p1}
+    return render(request, 'Templates.html', context)
 
 def blog(request):
     # posts = Post.objects.filter(is_published=True)
@@ -163,3 +165,4 @@ def post_comment(request):
 
 def pricing(request):
     return render(request, 'pricing.html')
+

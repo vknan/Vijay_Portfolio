@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Feature,Category,Post, Comment, Contact
+
  
 # Register your models here.
 
@@ -24,3 +25,32 @@ admin.site.register(Category)
 admin.site.register(Post, PostAdmin)
 admin.site.register(Comment, CommentAdmin)
 admin.site.register(Contact, ContactAdmin)
+
+#------------------------------------------------------------------------------------------------
+
+from .models import ProductCategory, Product, Customer, OrderItem, Review
+
+class OrderItemInline(admin.TabularInline):
+    model = OrderItem
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name', 'product_category', 'price_actual', 'discounted_price', 'avg_rating']
+    list_editable = ['price_actual', 'discounted_price']
+    list_filter = ['product_category']
+
+    inlines = [OrderItemInline]
+
+class OrderItemAdmin(admin.ModelAdmin):
+    list_display = ['product', 'customer', 'ordered', 'date_added']
+    list_editable = ['ordered']
+    list_filter = ['date_added']
+
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ['customer', 'product', 'rating', 'comment']
+    list_filter = ['customer', 'product']
+
+admin.site.register(ProductCategory)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Customer)
+admin.site.register(OrderItem, OrderItemAdmin)
+admin.site.register(Review, ReviewAdmin)

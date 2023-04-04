@@ -121,11 +121,13 @@
 
      
       <div class="gallery">
+        {% for product in products%}
         <div class="content">
-            <img src="{% static 'assets/img/Templates/shoes.png' %}" alt="shoes image">
-            <h3>E-learning</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
-            <h6>$1</h6>
+            <img src="{{product.product_image.url}}" alt="shoes image">
+            <h3>{{product.name}}</h3>
+            <p>{{product.description}} </p>
+            <h6 >₹{{product.price_actual}}</h6>
+            <h6>₹{{product.discounted_price}}</h6>
             <ul>
                 <li><i class="fa fa-star checked"></i></li>
                 <li><i class="fa fa-star checked"></i></li>
@@ -135,11 +137,11 @@
 
             </ul>
             <button class="buy-btn">Buy Now</button>
-            <a href="#" class="demo-link">Live Demo</a>
+            <a href="{{product.demo_link}}" class="demo-link">Live Demo</a>
 
         </div>
-
-        <div class="content">
+        {% endfor %}
+        <!-- <div class="content">
             <img src="{% static 'assets/img/Templates/shoes.png' %}" alt="earphone image">
             <h3>Real Estate</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
@@ -186,7 +188,7 @@
             </ul>
             <button class="buy-btn"> <a href="#" style="color:aliceblue">Buy Now</a> </button>
             <a href="#" class="demo-link">Live Demo</a>
-        </div>
+        </div> -->
         
         
     </div>
