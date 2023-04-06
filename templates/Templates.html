@@ -126,8 +126,8 @@
             <img src="{{product.product_image.url}}" alt="shoes image">
             <h3>{{product.name}}</h3>
             <p>{{product.description}} </p>
-            <h6 >₹{{product.price_actual}}</h6>
-            <h6>₹{{product.discounted_price}}</h6>
+            <h6 ><strike style="text-decoration: line-through;">₹{{product.price_actual}}</strike></h6>
+            <h6 style="color:red;">₹{{product.discounted_price}}</h6>
             <ul>
                 <li><i class="fa fa-star checked"></i></li>
                 <li><i class="fa fa-star checked"></i></li>
