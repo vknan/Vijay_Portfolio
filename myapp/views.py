@@ -163,6 +163,11 @@ def post_comment(request):
 
 
 
-def pricing(request):
-    return render(request, 'pricing.html')
+def termsandconditions(request):
+    return render(request, 'terms_and_conditions.html')
 
+def privacypolicy(request):
+    return render(request, 'privacy_policy.html')
+
+def refundpolicy(request):
+    return render(request, 'refund_policy.html')

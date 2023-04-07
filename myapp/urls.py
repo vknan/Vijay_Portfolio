@@ -13,5 +13,7 @@ urlpatterns = [
     path('blog_single/<str:title>/', views.blog_single, name = 'blog_single'),
     path('search/', views.search, name = 'search'),
     path('comment/', views.post_comment, name = 'comment'),
-    path('pricing/', views.pricing, name = 'pricing'),
+    path('termsandconditions/', views.termsandconditions, name = 'termsandconditions'),
+    path('privacypolicy/', views.privacypolicy, name = 'privacypolicy'),
+    path('refundpolicy/', views.refundpolicy, name = 'refundpolicy'),
 ]
