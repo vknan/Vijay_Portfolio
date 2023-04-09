@@ -69,6 +69,7 @@
           {% if user.is_authenticated %}
           <li><a class="active" href="/">Home</a></li>
           <li><a href="{% url 'blog' %}">Blog</a></li>
+          <li><a href="{% url 'Templates' %}">Templates</a></li>
           <li><a href="{% url 'logout' %}">Logout</a></li>
           {% else %}
           <li><a class="active" href="/">Home</a></li>
@@ -119,18 +120,23 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 {% if user.is_authenticated %}
+                {% for message in messages %}
+                <h3>{{message}}</h3>
+                <a href="{% url 'file_detail' file_id=file_id %}" class="btn-get-started animate__animated animate__fadeInUp">Download</a>
+                {% endfor %}
                 <h2 class="animate__animated animate__fadeInDown">Welcome, <span>{{user.username}}</span></h2>
+                <a href="{% url 'Templates' %}" class="btn-get-started animate__animated animate__fadeInUp">Browse Templates</a>
                 {% else %}
-                <h2 class="animate__animated animate__fadeInDown">I am <span>Vijay Krishna N.</span></h2>
-                <p class="animate__animated animate__fadeInUp">Software Engineer</p>
-                <a href="portfolio" class="btn-get-started animate__animated animate__fadeInUp">See My Work</a>
+                <h2 class="animate__animated animate__fadeInDown">Web Design & <span>Development</span></h2>
+                <p class="animate__animated animate__fadeInUp">Discover the Best Deals at Your Fingertips - Shop Now!</p>
+                <a href="{% url 'Templates' %}" class="btn-get-started animate__animated animate__fadeInUp">Browse Templates</a>
                 {% endif %}
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url(static/assets/img/slide/slide-2.jpg)">
+          <!-- <div class="carousel-item" style="background-image: url(static/assets/img/slide/slide-2.jpg)">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated fanimate__adeInDown">My <span>WORK</span></h2>
@@ -138,7 +144,7 @@
                 <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Slide 3 -->
           <!-- <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
@@ -391,7 +397,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>NAVIK</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>NAVIKONLINE</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

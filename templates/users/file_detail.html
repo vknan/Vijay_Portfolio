@@ -67,19 +67,14 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          {% if user.is_authenticated %}
-          <li><a  href="/">Home</a></li>
-          <li><a href="{% url 'blog' %}">Blog</a></li>
-          <li><a class="active" href="{% url 'Templates' %}">Templates</a></li>
-          <li><a href="{% url 'logout' %}">Logout</a></li>
-          {% else %}
           <li><a href="/">Home</a></li>
-          <li><a href="{% url 'about' %}" >About</a></li>
-          <li><a href="{% url 'services' %}">Services</a></li>
-          <li><a class="active" href="{% url 'Templates' %}">Templates</a></li>
+          <!-- <li><a href="{% url 'about' %}">About</a></li> -->
+          <!-- <li><a href="{% url 'services' %}">Services</a></li> -->
+          <li><a class="active" href="{% url 'file_detail' file_obj.id %}">Templates</a></li>
           <!-- <li><a href="team.html">Team</a></li> -->
           <!-- <li><a href="pricing.html">Pricing</a></li> -->
           <li><a href="{% url 'blog' %}">Blog</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -97,9 +92,8 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> -->
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-          <li><a href="{% url 'register' %}">Login/Register</a></li>
-          {% endif %}
+          <!-- <li><a href="{% url 'contact' %}">Contact</a></li> -->
+          <!-- <li><a href="{% url 'register' %}">Login/Register</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -124,35 +118,16 @@
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
-
-
-     
-      <div class="gallery">
-        {% for product in products%}
-        <div class="content">
-            <img src="{{product.product_image.url}}" alt="shoes image">
-            <h3>{{product.name}}</h3>
-            <p>{{product.description}} </p>
-            <h6 ><strike style="text-decoration: line-through;">₹{{product.price_actual}}</strike></h6>
-            <h6 style="color:red;">₹{{product.discounted_price}}</h6>
-            <ul>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star checked"></i></li>
-                <li><i class="fa fa-star"></i></li>
-
-            </ul>
-            <form method="post" action="{% url 'checkout' %}">
-              {% csrf_token %}
-              <input type="hidden" name="product_id" value="{{ product.id }}">
-              <button type="submit" class="buy-btn">Buy Now</button>
-            </form>
-            
-            <a href="{{product.demo_link}}" class="demo-link">Live Demo</a>
-
-        </div>
-        {% endfor %}
+            {% block content %}
+            {% if order_item %}
+              <h1>Download File</h1>
+              <p>You have already purchased this file. Click the button below to download:</p>
+              <a href="{% url 'download_file' file_obj.id %}" class="btn btn-primary">Download</a>
+            {% else %}
+              <h1>Download File</h1>
+              <p>You have not yet purchased this file.</p>
+            {% endif %}
+          {% endblock %}
         <!-- <div class="content">
             <img src="{% static 'assets/img/Templates/shoes.png' %}" alt="earphone image">
             <h3>Real Estate</h3>
@@ -351,7 +326,7 @@
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
+    <!-- <section id="clients" class="clients">
       <div class="container">
 
         <div class="section-title">
@@ -362,19 +337,15 @@
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
             <div class="swiper-slide"><img src="{% static 'assets/img/clients/Sakasi.jpeg' %}" class="img-fluid" alt=""></div>
-            <!-- <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div> -->
           </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
-    </section><!-- End Clients Section -->
+    </section> -->
+    
+    
+    <!-- End Clients Section -->
 
   </main><!-- End #main -->
 

@@ -40,8 +40,8 @@ class Post(models.Model):
         verbose_name = ("Post")
         verbose_name_plural = ('Posts')
 
-        def __str__(self):
-            return self.title
+    def __str__(self):
+        return self.title
 
 
 class Comment(models.Model):
@@ -113,6 +113,7 @@ class Product(models.Model):
 
 
 class Customer(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=20)
@@ -153,3 +154,17 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.customer} - {self.product}"
+
+#-------------------------------------------------------------------
+class FilesAdmin(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
+    adminupload = models.FileField(upload_to='product_files/', default='default_file.pdf')
+    title = models.CharField(max_length=50, null=True)
+    class Meta:
+        verbose_name = "Files Admin"
+        verbose_name_plural = "Files Admin"
+
+    def __str__(self):
+        if self.product:
+            return f"{self.product.name} - {self.adminupload.name}"
+        return f"FilesAdmin - {self.adminupload.name}"

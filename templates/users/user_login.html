@@ -66,9 +66,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
+
             {% if user.is_authenticated %}
             <li><a class="active" href="/">Home</a></li>
             <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'Templates' %}">Templates</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
             {% else %}
             <li><a class="active" href="/">Home</a></li>
@@ -120,6 +122,8 @@
               <div class="carousel-content">
                 {% if user.is_authenticated %}
                 <h2 class="animate__animated animate__fadeInDown">Welcome, <span>{{user.username}}</span></h2>
+                <a href="{% url 'Templates' %}" class="btn-get-started animate__animated animate__fadeInUp">Browse Templates</a>
+
                 {% else %}
                 <h2 class="animate__animated animate__fadeInDown">I am <span>Vijay Krishna N.</span></h2>
                 <p class="animate__animated animate__fadeInUp">Software Engineer</p>
@@ -213,7 +217,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>NAVIK</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>NAVIKONLINE</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
