@@ -146,7 +146,7 @@ def contact(request):
         c= Contact(name = name, email=email, subject= subject, message=message)
         c.save()
         return redirect('contact')
-    return render(request, 'contact.html')
+    return render(request, 'templates/contact.html')
 
 @login_required
 def post_comment(request):

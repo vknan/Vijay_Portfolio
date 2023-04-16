@@ -1,0 +1,64 @@
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+    /* Blog section */
+    #blog {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .article__div {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    /* Sidebar */
+    .sidebar {
+      width: 100%;
+      margin-top: 2rem;
+      padding: 0;
+    }
+  
+    /* Search form */
+    .search-form {
+      margin-bottom: 1rem;
+    }
+  
+    /* Categories */
+    .categories ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .categories li {
+      margin-bottom: 0.5rem;
+    }
+  
+    /* Recent Posts */
+    .recent-posts .post-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+  
+    .recent-posts .post-item img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+  
+    .recent-posts .post-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+  
+    .recent-posts .post-item time {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+  
