@@ -29,7 +29,7 @@ def home(request):
 
     features = Feature.objects.all()
     feature = {'feature1': features[0], 'feature2': features[1] , 'feature3': features[2]}
-    return render(request, 'index.html', feature )  
+    return render(request, 'templates/index.html', feature )  
 
 
 
@@ -53,7 +53,7 @@ def register(request):
         else:
             messages.info(request, 'Password Not The Same')
             return redirect('register')
-    return render(request, 'users/register.html')
+    return render(request, 'templates/users/register.html')
 
 def login(request):
     if request.method == 'POST':
@@ -64,13 +64,13 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             customer, created = Customer.objects.get_or_create(user=user)
-            return render(request, 'users/user_login.html')
+            return render(request, 'templates/users/user_login.html')
         else:
             messages.info(request, 'Credentials Invalid')
             return redirect('login')
-        return render(request, 'users/login.html')
+        return render(request, 'templates/users/login.html')
     else:
-        return render(request, 'users/login.html')
+        return render(request, 'templates/users/login.html')
 
 
 def logout(request):
@@ -82,16 +82,16 @@ def logout(request):
 #     return render(request, 'blog-single.html', {'posts': posts})
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'templates/about.html')
 
 def services(request):
-    return render(request, 'services.html')
+    return render(request, 'templates/services.html')
 
 
 def Templates(request):
     p1 = Product.objects.all()
     context = {'products': p1}
-    return render(request, 'Templates.html', context)
+    return render(request, 'templates/Templates.html', context)
 
 def blog(request):
     # posts = Post.objects.filter(is_published=True)
@@ -114,7 +114,7 @@ def blog(request):
         'posts':posts,
         'Categories': Categories
     }
-    return render(request, 'blog.html', context)
+    return render(request, 'templates/blog.html', context)
 
 def blog_single(request, title):
 
@@ -124,7 +124,7 @@ def blog_single(request, title):
     comments = Comment.objects.filter(post = posts)
     
     context = {'posts':posts, 'recent_posts':recent_posts , 'Categories': Categories, 'comments':comments}
-    return render(request, 'blog-single.html', context)
+    return render(request, 'templates/blog-single.html', context)
 
 def search(request):
     search_query = request.GET.get('q')
@@ -132,7 +132,7 @@ def search(request):
     context = {
         'posts':posts
         }
-    return render(request, 'blog.html', context)
+    return render(request, 'templates/blog.html', context)
 
     # rest of the view code
    
@@ -169,13 +169,13 @@ def post_comment(request):
 
 
 def termsandconditions(request):
-    return render(request, 'terms_and_conditions.html')
+    return render(request, 'templates/terms_and_conditions.html')
 
 def privacypolicy(request):
-    return render(request, 'privacy_policy.html')
+    return render(request, 'templates/privacy_policy.html')
 
 def refundpolicy(request):
-    return render(request, 'refund_policy.html')
+    return render(request, 'templates/refund_policy.html')
 
 
 
@@ -189,7 +189,7 @@ def checkout(request):
     if request.method == 'POST':
         product_id = request.POST.get('product_id')
         product = get_object_or_404(Product, id=product_id)
-        return render(request, 'users/checkout.html', {'product': product})
+        return render(request, 'templates/users/checkout.html', {'product': product})
 
     return HttpResponseRedirect('/')
 
@@ -299,7 +299,7 @@ def payment_success(request):
 def placed_order(request, file_id):
     features = Feature.objects.all()
     feature = {'feature1': features[0], 'feature2': features[1] , 'feature3': features[2], 'file_id':file_id}
-    return render(request, 'index.html', feature )
+    return render(request, 'templates/index.html', feature )
     
 @login_required
 def file_detail(request, file_id):
@@ -307,7 +307,7 @@ def file_detail(request, file_id):
     customer = request.user.customer
     order_item = OrderItem.objects.filter(product__id=file_obj.product_id, customer=customer, ordered=True).first()
     context = {'order_item': order_item, 'file_obj': file_obj}
-    return render(request, 'users/file_detail.html', context)
+    return render(request, 'templates/users/file_detail.html', context)
     
 @login_required
 def download_file(request, file_id):
