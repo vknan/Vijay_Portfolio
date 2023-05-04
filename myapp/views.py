@@ -181,8 +181,7 @@ def refundpolicy(request):
 
 
 #--------------------------------------------------------------------------------------------------
-
-
+# ================================Not Required Code==================================================
 
 @login_required
 def checkout(request):
@@ -279,22 +278,22 @@ def process_order(request):
     return redirect('checkout')
 
 
-def payment_success(request):
-    if request.method == 'POST':
-        # Get the payment response from PayUmoney
-        payumoney = PayUmoneySdk(
-            merchant_key='your_merchant_key',
-            merchant_id='your_merchant_id',
-            salt='your_salt',
-            test_mode=True,  # Change to False for production
-        )
-        response = payumoney.payment_response(request.POST)
-        if response.get('status') == 'success':
-            # Payment successful, update Payment object and serve file for download
-            payment = Payment.objects.get(txnid=response.get('txnid'))
-            payment.status = Payment.SUCCESS
-            payment.payment_response = json.dumps(response)
-            payment.save()
+# def payment_success(request):
+#     if request.method == 'POST':
+#         # Get the payment response from PayUmoney
+#         payumoney = PayUmoneySdk(
+#             merchant_key='your_merchant_key',
+#             merchant_id='your_merchant_id',
+#             salt='your_salt',
+#             test_mode=True,  # Change to False for production
+#         )
+#         response = payumoney.payment_response(request.POST)
+#         if response.get('status') == 'success':
+#             # Payment successful, update Payment object and serve file for download
+#             payment = Payment.objects.get(txnid=response.get('txnid'))
+#             payment.status = Payment.SUCCESS
+#             payment.payment_response = json.dumps(response)
+#             payment.save()
 
 @login_required
 def placed_order(request, file_id):
