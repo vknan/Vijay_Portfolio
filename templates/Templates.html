@@ -120,9 +120,10 @@
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
 
-
+    <h6>Note: Files will be sent via email after verifying your payment</h6>
      
       <div class="gallery">
+        
         {% for product in products%}
         <div class="content">
             <img src="{{product.product_image.url}}" alt="shoes image">
@@ -138,13 +139,13 @@
                 <li><i class="fa fa-star"></i></li>
 
             </ul>
-            <form method="post" action="{% url 'checkout' %}">
+            <!-- <form method="post" action="{% url 'checkout' %}">
               {% csrf_token %}
               <input type="hidden" name="product_id" value="{{ product.id }}">
               <button type="submit" class="buy-btn">Buy Now</button>
-            </form>
-            
-            <a href="{{product.demo_link}}" class="demo-link">Live Demo</a>
+            </form> -->
+            <button type="submit" class="buy-btn"><a class="buy-link" href="https://pmny.in/2IpogUnpE0NZ">Buy Now</a></button>
+            <a href="{{product.demo_link}}" class="demo-link">Watch Demo</a>
 
         </div>
         {% endfor %}

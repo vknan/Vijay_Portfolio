@@ -209,6 +209,7 @@ def process_order(request):
 
         try:
             product = Product.objects.get(id=product_id)
+            
         except Product.DoesNotExist:
             messages.error(request, 'Invalid product ID')
             return redirect('checkout')

@@ -10,9 +10,10 @@ body {
   .gallery {
     max-width: 1200px;
     margin: 0 auto;
+    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   
   /* Set width of each product card and space between them */
