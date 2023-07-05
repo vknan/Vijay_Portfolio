@@ -39,9 +39,15 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "myapp",
     "ckeditor",
+    # 'django.contrib.sites',
+    # 'cms',
+    # 'menus',
+    # 'treebeard',
+    # 'sekizai',
+    
     # "MyAppConfig",
 ]
-
+SITE_ID = 1
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -108,6 +114,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
+LANGUAGES = [
+    ('en', 'English'),
+    
+    # Add other languages you want to support
+]
 
 TIME_ZONE = "UTC"
 
@@ -138,3 +149,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ]
 
 
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Replace with the hostname or IP address of your SMTP server
+EMAIL_PORT = 587  # Replace with the appropriate port for your SMTP server
+EMAIL_HOST_USER = 'jobs.vijaykrishna@gmail.com'  # Replace with your SMTP server email address
+EMAIL_HOST_PASSWORD = 'vijay1#@97'  # Replace with your SMTP server email password
+EMAIL_USE_TLS = True  # Set it to True if your SMTP server requires a secure TLS connection
+DEFAULT_FROM_EMAIL = 'jobs.vijaykrishna@gmail.com'  # Replace with the email address you want to use as the default "From" address

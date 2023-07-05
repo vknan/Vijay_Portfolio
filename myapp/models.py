@@ -3,13 +3,15 @@ from datetime import datetime
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
 
-
-
-
 # Create your models here.
 class Feature(models.Model):
     name = models.CharField(max_length = 100)
     details = models.CharField(max_length =500)
+    def __str__(self):
+        return self.name
+    class meta:
+        verbose_name = 'Feature'
+        verbose_name_plural = 'Features'
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
