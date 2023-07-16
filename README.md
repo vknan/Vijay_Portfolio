@@ -1,5 +1,5 @@
 # NAVIKONLINE
-# Steps to run the project
+# Steps to test builder.io API integration for the project
 1. Install package using command 'pip install virtualenvwrapper-win'
 2. Create a Virtual Environment with command 'mkvirtualenv env_name'
 3. Install all the requirements in your virtual environment using command 'pip install -r requirements.txt'
@@ -29,7 +29,7 @@ builder.init('Your API Key Here');
 
 # Go to reactapp using cd and install node modules
 - npm install
-- 
+  
 # and then give build command
 npm run build
 # check whether react app is running at port 3000 using 
