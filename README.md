@@ -4,7 +4,7 @@
 2. Create a Virtual Environment with command 'mkvirtualenv env_name'
 3. Install all the requirements in your virtual environment using command 'pip install -r requirements.txt'
 
-# You can Get Private and Public API Keys for accountsettings of builder.io
+# You can Get Private and Public API Keys from accountsettings of builder.io
 Click and Login: https://builder.io/account/space
 Go to following location and get API Keys
 ![image](https://github.com/vknan/Vijay_Portfolio/assets/70138450/dfd20e31-cec6-4601-a276-cc5677c327d9)
@@ -12,9 +12,9 @@ Go to following location and get API Keys
 
 # Settings.py
 # Give your Builder API Key here
-BUILDER_API_KEY = 'Your Private APIKey'
-BUILDER_PUBLIC_KEY = 'Your Public APIKey'
-BUILDER_AUTO_CREATE_PAGES = True
+- BUILDER_API_KEY = 'Your Private APIKey'
+- BUILDER_PUBLIC_KEY = 'Your Public APIKey'
+- BUILDER_AUTO_CREATE_PAGES = True
 
 # Inside reactappbuilder folder
 # Give your Public API Key
