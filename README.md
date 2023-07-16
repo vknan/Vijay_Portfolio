@@ -1,4 +1,4 @@
-# Vijay_Portfolio
+# NAVIKONLINE
 # Steps to run the project
 1. Install package using command 'pip install virtualenvwrapper-win'
 2. Create a Virtual Environment with command 'mkvitualenv env_name'
