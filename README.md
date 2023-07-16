@@ -27,12 +27,15 @@ builder.init('Your API Key Here');
 # Create Model and set preview url in builder.io as shown in Image
 ![image](https://github.com/vknan/Vijay_Portfolio/assets/70138450/bb98ebcf-f33d-4c67-bfaa-f01ab0337156)
 
-
-# Go to reactapp and give build command
+# Go to reactapp using cd and install node modules
+- npm install
+- 
+# and then give build command
 npm run build
-# check whether react app is running using npm start
+# check whether react app is running at port 3000 using 
+- npm start
 
-# Then run django server by command
+# Then run django server by command at port 8000
 python manage.py runserver
 
 # Open your page in builder.io
@@ -42,5 +45,7 @@ I am facing the following errors in builder page and react app displays blank pa
 ![image](https://github.com/vknan/Vijay_Portfolio/assets/70138450/efc9c645-97e0-4f8f-be92-5203755b12e6)
 ![image](https://github.com/vknan/Vijay_Portfolio/assets/70138450/34892026-fdeb-44b0-b1ca-968ffd1a4f34)
 
+# Note:
+- Keep the django server running to test builder.io integration
 
 
