@@ -83,6 +83,7 @@ class pages:
     @staticmethod
     def about(request):
         return render(request, 'templates/pages/about.html')
+    
     @staticmethod
     def services(request):
         return render(request, 'templates/pages/services.html')
@@ -92,6 +93,7 @@ class pages:
         p1 = Product.objects.all()
         context = {'products': p1}
         return render(request, 'templates/pages/Templates.html', context)
+    
     @staticmethod
     def blog(request):
         category_name = request.GET.get('category')
