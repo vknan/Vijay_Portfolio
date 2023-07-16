@@ -37,7 +37,9 @@ class login_functionality:
         return render(request, 'templates/login_func/register.html')
     @staticmethod
     def login(request):
-        if request.method == 'POST':
+        url = request.get_full_path()
+        print(url)
+        if (request.method == 'POST') :
             username = request.POST['username']
             password = request.POST['password']
             user = auth.authenticate(username = username, password = password)
@@ -45,7 +47,7 @@ class login_functionality:
             if user is not None:
                 auth.login(request, user)
                 customer, created = Customer.objects.get_or_create(user=user)
-                return render(request, 'templates/login_func/user_login.html')
+                return render(request, 'index.html')
             else:
                 messages.info(request, 'Credentials Invalid')
                 return redirect('login')
@@ -328,3 +330,9 @@ class PaymentProcess:
         else:
             # If the customer has not ordered the file, return a 404 error
             raise Http404("The requested file does not exist or has not been ordered by you.")
+
+
+class reactappbuilder:
+    @login_required
+    def dashboard(request):
+        return render(request, 'index.html')

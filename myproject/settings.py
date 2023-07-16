@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-*%#@vegjt5vdg)rg$h63ebp-3kyimzxb8=*%b%0cg8osa^z36c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vknan.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['vknan.pythonanywhere.com', '127.0.0.1', 'localhost',]
 
 
 # Application definition
@@ -63,7 +63,7 @@ ROOT_URLCONF = "myproject.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR, 'templates'],
+        "DIRS": [BASE_DIR, 'templates', 'reactbuilder/build'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -130,7 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static'), os.path.join(BASE_DIR, 'reactbuilder/build/static'),]
 # print(STATICFILES_DIRS)
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 # print(STATIC_ROOT)
@@ -146,5 +146,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #     'myapp.auth_backend.CustomerBackend',
 #     'django.contrib.auth.backends.ModelBackend',
 # ]
+
+
+BUILDER_API_KEY = 'Your Private APIKey'
+BUILDER_PUBLIC_KEY = 'Your Public APIKey'
+BUILDER_AUTO_CREATE_PAGES = True
+
 
 

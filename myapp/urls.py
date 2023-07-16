@@ -1,9 +1,8 @@
 from django.urls import path
 from . import views
 from django.contrib.auth import views as auth_views
+
 urlpatterns = [
-
-
     path('user/register/', views.login_functionality.register, name = 'register'),
     path('accounts/login/', views.login_functionality.login, name = 'login'),
     path('logout/', views.login_functionality.logout, name = 'logout'),
@@ -33,4 +32,7 @@ urlpatterns = [
     path('checkout/', views.PaymentProcess.checkout, name = 'checkout'),
     path('process_order/', views.PaymentProcess.process_order, name = 'process_order'),
     path('placed_order/<int:file_id>/', views.PaymentProcess.placed_order, name = 'placed_order'),
+
+    path('dashboard/', views.reactappbuilder.dashboard, name='builder_page'),
+    
 ]
