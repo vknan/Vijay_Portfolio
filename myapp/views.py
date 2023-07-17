@@ -333,6 +333,6 @@ class PaymentProcess:
 
 
 class reactappbuilder:
-    @login_required
+    # @login_required
     def dashboard(request):
         return render(request, 'index.html')

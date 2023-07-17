@@ -25,9 +25,9 @@ SECRET_KEY = "django-insecure-*%#@vegjt5vdg)rg$h63ebp-3kyimzxb8=*%b%0cg8osa^z36c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vknan.pythonanywhere.com', '127.0.0.1', 'localhost',]
+# ALLOWED_HOSTS = ['vknan.pythonanywhere.com', '127.0.0.1', 'localhost',]
 
-
+ALLOWED_HOSTS =['*',]
 # Application definition
 
 INSTALLED_APPS = [
@@ -148,9 +148,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ]
 
 
-BUILDER_API_KEY = 'Your Private APIKey'
-BUILDER_PUBLIC_KEY = 'Your Public APIKey'
-BUILDER_AUTO_CREATE_PAGES = True
+# BUILDER_API_KEY = 'Your Private Key'
+# BUILDER_PUBLIC_KEY = 'Your Public API Key'
+# BUILDER_AUTO_CREATE_PAGES = True
 
 
 

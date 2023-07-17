@@ -4,7 +4,7 @@ import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
 
 
 // Put your API key here
-builder.init('Your API Key Here');
+builder.init('Your Public API Key Here');
 
 // set whether you're using the Visual Editor,
 // whether there are changes,
