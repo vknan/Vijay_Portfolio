@@ -47,7 +47,7 @@ class login_functionality:
             if user is not None:
                 auth.login(request, user)
                 customer, created = Customer.objects.get_or_create(user=user)
-                return render(request, 'index.html')
+                return redirect('dashboard')
             else:
                 messages.info(request, 'Credentials Invalid')
                 return redirect('login')
@@ -134,7 +134,6 @@ class pages:
             'posts':posts
             }
         return render(request, 'templates/pages/blog.html', context)
-
         # rest of the view code
     
     @staticmethod
@@ -178,8 +177,11 @@ class pages:
     @staticmethod
     def refundpolicy(request):
         return render(request, 'templates/pages/refund_policy.html')
-
-
+    
+    @staticmethod
+    @login_required
+    def dashboard(request):
+        return render(request, 'reactbuilder/build/index.html')
 
 
 
@@ -332,7 +334,3 @@ class PaymentProcess:
             raise Http404("The requested file does not exist or has not been ordered by you.")
 
 
-class reactappbuilder:
-    # @login_required
-    def dashboard(request):
-        return render(request, 'index.html')

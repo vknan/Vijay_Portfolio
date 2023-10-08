@@ -1,11 +1,20 @@
 
 import React,{ useEffect, useState } from "react";
-import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
-
+import { BuilderComponent, builder, useIsPreviewing, Builder } from "@builder.io/react";
+import Heading from "./Heading";
 
 // Put your API key here
-builder.init('Your Public API Key Here');
+builder.init('33f040e0f6b744819dd3f3aad5bb7539');
+// Set the builderSessionId cookie
+// document.cookie = "SameSite=None; Secure";
 
+// // Make sure that every page where renders Builder 
+// // content calls the file containing this function call
+Builder.registerComponent(Heading, { 
+  name: 'Heading',
+  inputs: [{ name: 'title', type: 'text' }],
+  image: 'https://tabler-icons.io/static/tabler-icons/icons-png/3d-cube-sphere-off.png'
+})
 // set whether you're using the Visual Editor,
 // whether there are changes,
 // and render the content if found
@@ -51,3 +60,8 @@ export default function CatchAllRoute() {
     </>
   );
 }
+
+
+
+
+

@@ -33,6 +33,6 @@ urlpatterns = [
     path('process_order/', views.PaymentProcess.process_order, name = 'process_order'),
     path('placed_order/<int:file_id>/', views.PaymentProcess.placed_order, name = 'placed_order'),
 
-    path('dashboard/', views.reactappbuilder.dashboard, name='builder_page'),
+    path('dashboard/', views.pages.dashboard, name='dashboard'),
     
 ]

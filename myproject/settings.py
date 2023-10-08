@@ -148,9 +148,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ]
 
 
-# BUILDER_API_KEY = 'Your Private Key'
-# BUILDER_PUBLIC_KEY = 'Your Public API Key'
-# BUILDER_AUTO_CREATE_PAGES = True
 
 
 
