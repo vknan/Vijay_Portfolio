@@ -2,8 +2,17 @@ from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from django_ckeditor_5.fields import CKEditor5Field
 
 # Create your models here.
+ 
+
+
+class Article(models.Model):
+    title=models.CharField('Title', max_length=200)
+    text=CKEditor5Field('Text', config_name='extends')
+
+
 class Feature(models.Model):
     name = models.CharField(max_length = 100)
     details = models.CharField(max_length =500)

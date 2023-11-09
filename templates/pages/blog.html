@@ -27,7 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/css/style_blog.css' %}" rel="stylesheet">
+  <!-- <link href="{% static 'assets/css/style_blog.css' %}" rel="stylesheet"> -->
   <!-- =======================================================
   * Template Name: Eterna - v4.10.0
   * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
@@ -125,9 +125,13 @@
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Blog Section ======= -->
-    <section id="blog" class="blog" style='display: flex;padding:1rem;width: 100vw;justify-content: center;'>
+    <section id="blog" class="blog" >
 
-          <div class="article__div" style="width:43%;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
             
 
             {% for post in posts %}
@@ -160,62 +164,66 @@
               </div>
 
             </article><!-- End blog entry -->
-          {% endfor %}
-        </div>
-
-          <div class="sidebar" id="sidebar__div" style="width:25%;">
-
-            <h3 class="sidebar-title">Search</h3>
-            <div class="sidebar-item search-form">
-              <form action="/search/" method="GET">{% csrf_token %}
-                <input type="text" name="q">
-                <button type="submit"><i class="bi bi-search"></i></button>
-              </form>
-            </div><!-- End sidebar search formn-->
-
-            <h3 class="sidebar-title">Categories</h3>
-            <div class="sidebar-item categories">
-              <ul>
-                {% for category in Categories %}
-                
-                  <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
+            {% endfor %}
+          </div>
+          <div class="col-lg-4">
+            <div class="sidebar">
+  
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="/search/" method="GET">{% csrf_token %}
+                  <input type="text" name="q">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><!-- End sidebar search formn-->
+  
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  {% for category in categories %}
+                    <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
+                  {% endfor %}
+                </ul>
+              </div><!-- End sidebar categories-->
+  
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                {% for post in posts %}
+                <div class="post-item clearfix">
+                  <img src="{{post.thumbnail.url}}" alt="">
+                  <h4><a href="{% url 'blog_single' post.title %}">{{post.title}}</a></h4>
+                  <time datetime="{{post.posted_at}}">{{post.posted_at}}</time>
+                </div>
                 {% endfor %}
-              </ul>
-            </div><!-- End sidebar categories-->
-
-            <h3 class="sidebar-title">Recent Posts</h3>
-            <div class="sidebar-item recent-posts">
-              {% for post in posts %}
-              <div class="post-item clearfix">
-                <img src="{{post.thumbnail.url}}" alt="">
-                <h4><a href="{% url 'blog_single' post.title %}">{{post.title}}</a></h4>
-                <time datetime="{{post.posted_at}}">{{post.posted_at}}</time>
               </div>
-              {% endfor %}
-            </div>
-
-            
-
-            <!-- <h3 class="sidebar-title">Tags</h3>
-            <div class="sidebar-item tags">
-              <ul>
-                <li><a href="#">App</a></li>
-                <li><a href="#">IT</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Mac</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Office</a></li>
-                <li><a href="#">Creative</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Smart</a></li>
-                <li><a href="#">Tips</a></li>
-                <li><a href="#">Marketing</a></li>
-              </ul>
-            </div>End sidebar tags -->
-
-          </div><!-- End sidebar -->
+  
+              
+  
+              <!-- <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">App</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">Design</a></li>
+                  <li><a href="#">Office</a></li>
+                  <li><a href="#">Creative</a></li>
+                  <li><a href="#">Studio</a></li>
+                  <li><a href="#">Smart</a></li>
+                  <li><a href="#">Tips</a></li>
+                  <li><a href="#">Marketing</a></li>
+                </ul>
+              </div>End sidebar tags -->
+  
+            </div><!-- End sidebar -->
+          </div>
+        </div>
+        
           
+      </div>
 
+    </div>
     </section><!-- End Blog Section -->
     <div class="pagination" >
       <span class="step-links" >
@@ -290,9 +298,9 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              Shaikpet <br>
+              Beeramguda<br>
               Hyderabad<br>
-              Telangana <br><br>
+              Telangana<br><br>
               <strong>Phone:</strong> +91 9100529687<br>
               <strong>Email:</strong> jobs.vijaykrishna@gmail.com<br>
             </p>

@@ -27,7 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/css/style_2.css' %}" rel="stylesheet">
+  <!-- <link href="{% static 'assets/css/style_2.css' %}" rel="stylesheet"> -->
   <!-- =======================================================
   * Template Name: Eterna - v4.10.0
   * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
@@ -115,10 +115,14 @@
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Blog Single Section ======= -->
-    <section id="blog" class="blog" style='display: flex;padding:1rem;width: 100vw;justify-content: center;'>
+    <section id="blog" class="blog">
       
 
-        <div class="article__div" style="width:43%;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
 
             <article class="entry entry-single">
 
@@ -181,19 +185,6 @@
 
               <h4 class="comments-count">Comments</h4>
 
-              <!-- <div id="comment-1" class="comment">
-                <div class="d-flex">
-                  <div class="comment-img"><img src="{% static 'assets/img/blog/comments-1.jpg' %}" alt=""></div>
-                  <div>
-                    <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                    <time datetime="2020-01-01">01 Jan, 2020</time>
-                    <p>
-                      Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
-                      Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
-                    </p>
-                  </div>
-                </div>
-              </div>End comment #1 -->
               {% for comment in comments %}
               
               <div id="comment-1" class="comment">
@@ -207,70 +198,8 @@
                     </p>
                   </div>
                 </div>
+                </div>
                 {% endfor %}
-                <!-- <div id="comment-reply-1" class="comment comment-reply">
-                  <div class="d-flex">
-                    <div class="comment-img"><img src="{% static 'assets/img/blog/comments-3.jpg' %}" alt=""></div>
-                    <div>
-                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                      <time datetime="2020-01-01">01 Jan, 2020</time>
-                      <p>
-                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
-
-                        Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
-
-                        Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
-                      </p>
-                    </div>
-                  </div> -->
-
-                  <!-- <div id="comment-reply-2" class="comment comment-reply">
-                    <div class="d-flex">
-                      <div class="comment-img"><img src="{% static 'assets/img/blog/comments-4.jpg' %}" alt=""></div>
-                      <div>
-                        <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                        <time datetime="2020-01-01">01 Jan, 2020</time>
-                        <p>
-                          Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
-                        </p>
-                      </div>
-                    </div>
-
-                  </div>End comment reply #2 -->
-
-                <!-- </div>End comment reply #1 -->
-
-              </div><!-- End comment #2-->
-
-              <!-- <div id="comment-3" class="comment">
-                <div class="d-flex">
-                  <div class="comment-img"><img src="{% static 'assets/img/blog/comments-5.jpg' %}" alt=""></div>
-                  <div>
-                    <h5><a href="">Nolan Davidson</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                    <time datetime="2020-01-01">01 Jan, 2020</time>
-                    <p>
-                      Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem aspernatur aut quam ut. Voluptatem est accusamus iste at.
-                      Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-              <-- End comment #3 -->
-
-              <!-- <div id="comment-4" class="comment">
-                <div class="d-flex">
-                  <div class="comment-img"><img src="{% static 'assets/img/blog/comments-6.jpg' %}" alt=""></div>
-                  <div>
-                    <h5><a href="">Kay Duggan</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
-                    <time datetime="2020-01-01">01 Jan, 2020</time>
-                    <p>
-                      Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in fugiat.
-                    </p>
-                  </div>
-                </div>
-
-              </div>End comment #4 --> 
 
               <div class="reply-form">
                 <h4>Leave a Reply</h4>
@@ -300,8 +229,6 @@
                       <input name="id" type="hidden" class="form-control" value = '{{posts.id}}' placeholder="id">
                     </div>
                   </div>
-
-                  
                   <button type="submit" class="btn btn-primary">Post Comment</button>
 
                 </form>
@@ -313,60 +240,61 @@
           </div><!-- End blog entries list -->
         
         
+          <div class="col-lg-4">
 
-          <div class="sidebar" id="sidebar__div" style="width:25%; height:10%">
+            <div class="sidebar">
 
-            <h3 class="sidebar-title">Search</h3>
-            <div class="sidebar-item search-form">
-              <form action="/search/" method="GET">{% csrf_token %}
-                <input type="text" name="q">
-                <button type="submit"><i class="bi bi-search"></i></button>
-              </form>
-            </div><!-- End sidebar search formn-->
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="/search/" method="GET">{% csrf_token %}
+                  <input type="text" name="q">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><!-- End sidebar search formn-->
 
-            <h3 class="sidebar-title">Categories</h3>
-            <div class="sidebar-item categories">
-              <ul>
-                {% for category in Categories %}
-                  <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  {% for category in Categories %}
+                    <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
+                  {% endfor %}
+                </ul>
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                {% for post in recent_posts %}
+                <div class="post-item clearfix">
+                  <img src="{{post.thumbnail.url}}" alt="">
+                  <h4><a href="{% url 'blog_single' post.title %}">{{post.title}}</a></h4>
+                  <time datetime="{{post.posted_at}}">{{post.posted_at}}</time>
+                </div>
                 {% endfor %}
-              </ul>
-            </div><!-- End sidebar categories-->
 
-            <h3 class="sidebar-title">Recent Posts</h3>
-            <div class="sidebar-item recent-posts">
-              {% for post in recent_posts %}
-              <div class="post-item clearfix">
-                <img src="{{post.thumbnail.url}}" alt="">
-                <h4><a href="{% url 'blog_single' post.title %}">{{post.title}}</a></h4>
-                <time datetime="{{post.posted_at}}">{{post.posted_at}}</time>
-              </div>
-              {% endfor %}
-              
+              </div><!-- End sidebar recent posts-->
 
-              
-            </div><!-- End sidebar recent posts-->
+              <!-- <h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">App</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">Design</a></li>
+                  <li><a href="#">Office</a></li>
+                  <li><a href="#">Creative</a></li>
+                  <li><a href="#">Studio</a></li>
+                  <li><a href="#">Smart</a></li>
+                  <li><a href="#">Tips</a></li>
+                  <li><a href="#">Marketing</a></li>
+                </ul>
+              </div> -->
+              <!-- End sidebar tags-->
 
-            <!-- <h3 class="sidebar-title">Tags</h3>
-            <div class="sidebar-item tags">
-              <ul>
-                <li><a href="#">App</a></li>
-                <li><a href="#">IT</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">Mac</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Office</a></li>
-                <li><a href="#">Creative</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Smart</a></li>
-                <li><a href="#">Tips</a></li>
-                <li><a href="#">Marketing</a></li>
-              </ul>
-            </div>End sidebar tags -->
+            </div><!-- End sidebar -->
 
-          </div><!-- End sidebar -->
-
-        
+          </div><!-- End blog sidebar -->
+        </div>
 
       </div>
     </section><!-- End Blog Single Section -->
@@ -424,9 +352,9 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              Shaikpet <br>
+              Beeramguda<br>
               Hyderabad<br>
-              Telangana <br><br>
+              Telangana<br><br>
               <strong>Phone:</strong> +91 9100529687<br>
               <strong>Email:</strong> jobs.vijaykrishna@gmail.com<br>
             </p>
