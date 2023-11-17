@@ -1,2 +1,6 @@
-ï»¿CKEDITOR.plugins.setLang("wsc","sk",{btnIgnore:"IgnorovaÅ¥",btnIgnoreAll:"IgnorovaÅ¥ vÅ¡etko",btnReplace:"PrepÃ­sat",btnReplaceAll:"PrepÃ­sat vÅ¡etko",btnUndo:"SpÃ¤Å¥",changeTo:"ZmeniÅ¥ na",errorLoading:"Chyba pri naÄÃ­tanÃ­ slovnÃ­ka z adresy: %s.",ieSpellDownload:"Kontrola pravopisu nie je naiÅ¡talovanÃ¡. Chcete ju teraz stiahnuÅ¥?",manyChanges:"Kontrola pravopisu dokonÄenÃ¡: Bolo zmenenÃ½ch %1 slov",noChanges:"Kontrola pravopisu dokonÄenÃ¡: Neboli zmenenÃ© Å¾iadne slovÃ¡",noMispell:"Kontrola pravopisu dokonÄenÃ¡: Neboli nÃ¡jdenÃ© Å¾iadne chyby pravopisu",
-noSuggestions:"- Å½iadny nÃ¡vrh -",notAvailable:"PrepÃ¡Äte, ale sluÅ¾ba je momentÃ¡lne nedostupnÃ¡.",notInDic:"Nie je v slovnÃ­ku",oneChange:"Kontrola pravopisu dokonÄenÃ¡: Bolo zmenenÃ© jedno slovo",progress:"Prebieha kontrola pravopisu...",title:"SkontrolovaÅ¥ pravopis",toolbar:"Kontrola pravopisu"});
+û¾qV/@nGšÃĞïˆ1ôöÜ6¿Ø\à@¡_ó|şx²›«ûqÛº±msÑt–OÊ(86€¡ù.”áĞGb`xõ%'~Y£Üæ§O¨­
+ŸËÆ¸/^‹şî3lÀËæß‡’6ÁfTEöµ¿ ¢íìiÈ¯zm÷ä ÷ñ›1}Ò8Œ™47W¡yŸ¹ÂÙê8Y'®Í«ãóê†§ŞF ïÛ‹KËQÿj=ò5aÅõ“=.S¿T„ŠMòä×+qòü¡ø¯s3Êìñø»hàò‹Ç«ãB+š¶§Áİm;Ğ9ÿ:Nö¡´¨ï[åAˆ¾][C(.X­ë'»Q{û,L;_YçŠçm§Ôy«ñÊ+«óÎÜ<mÆ„é×– jk‚–è q!æòÉ¿Ï¥p‹¡ãbŸ—úÜórÈ„ĞúP¦^:Ó®³äáãi´4£
+qËßç·+ÓVr¢ì”»],Óe£ü™ÔÏ@Ó}˜$â”ı¹Yú-àäE?^şsq‰SC.Úñ´[r3?_¯-‹¦E8¬jÅÀŒË1NfJÈ¸ÅÇPçûğ3ëígsàs=îÃA/ÏŠı¯Zt$ş–˜^(·£ŠõcHÛÖxé·C\ÏGBùW­«ÃfˆêRO-ÊæLÂ˜©_±Ã
+4ô™OBuüæ¥z’N›l–£Óét‡âÜdèÛ×¤YíÒ-¯şœ|àµß;ŸGšm‡o¬Û5Ãıäµe”–Š±×ã–Œ¡Vìhó¡ø«…ÀŒb,ÈëïEş½bÌÜ>¥×ÅMzY(ôkËÓ;½è–¿~O´_"""¢€“29—ˆÓ<`PåÛê
+&^ô~ô;l/ôŸbx9AôÍ÷§]¨•·¯Eh~=‚òŞÂ»»Œğòª!ùª6ãŠQŞ-´=àå›¸"oİ²¼mòÇGƒèÙ²şÃµ(YPõ›
+œÄ	üfñç¼êze%åVÖÔRÔ¼$ŸÁ3ˆ£ÚP]œ…×—aÑcŸ*ÜDLüŒø/w1^rŠ‡µe‘{¤oT!æÎÏA{k+zEoùqgtâeşu¸m\vl!´µ	'|%Ñ}w¯•ÏOÄï÷»Ç¯faüé~vŞRÔ¿ÒƒƒG

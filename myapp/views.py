@@ -104,7 +104,7 @@ class pages:
         if category_name:
             posts = posts.filter(category__name=category_name)
         
-        paginator = Paginator(posts, 2)
+        paginator = Paginator(posts, 10)
         page = request.GET.get('page')
         posts = paginator.get_page(page)
         
@@ -114,8 +114,8 @@ class pages:
             'posts': posts,
             'categories': categories
         }
-        
         return render(request, 'templates/pages/blog.html', context)
+    
     @staticmethod
     def blog_single(request, title):
 

@@ -1,5 +1,1 @@
-ï»¿/*
- Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
- For licensing, see LICENSE.md or http://ckeditor.com/license
-*/
-CKEDITOR.plugins.setLang("language","km",{button:"áž€áŸ†ážŽážáŸ‹â€‹áž—áž¶ážŸáž¶",remove:"áž›áž»áž”â€‹áž—áž¶ážŸáž¶"});
+m(’•^‹{õÂÔñHÃåªJvÇÚÕÏ#:ªå=5_ÖêÎ>b;#q×¸œ:sÁÕ5xqb*¾7x0Š|Œ^!!¸;®":uÂÞóçëK"ÚÔÔÔàœá,ÆÜñ-™â¨3{i&""""""ºæ”êÌ…øæ«3{‚%É#…EÅxï£OåTƒÞ!]ðÊ·'a@×p™Ò GçÎXöÝiXÿû_!¤s°LíØ”jÎJçð®]ðâ²Ÿá•%‹Ô–®ÜÛÿ¬¹ënøùÉ”ûö}‰êêÆ¥+jäÑu„ADòÈß7nA``€C0Piãð¹”„ºî-Ä·[WŒ	‹ [G
