@@ -7,8 +7,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Blog</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Personal Portfolio Project" name="Navikonline is my personal portfolio showcasing my skills, Want to talk?">
+  <meta content="Software Engineer & Designer" name="Designer, Engineer, Hire Me">
 
   <!-- Favicons -->
   <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
@@ -70,15 +70,15 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a class="active" href="{% url 'blog' %}">Blog</a></li>
-            <li><a href="{% url 'Templates' %}">Templates</a></li>
+            <li><a href="{% url 'Templates' %}">My Projects</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
           </ul>
           {% else %}
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="{% url 'about' %}" >About</a></li>
-            <li><a href="{% url 'services' %}">Services</a></li>
-            <li><a href="{% url 'Templates' %}">Templates</a></li>
+            <li><a href="{% url 'services' %}">My Skills</a></li>
+            <li><a href="{% url 'Templates' %}">My Projects</a></li>
             <!-- <li><a href="team.html">Team</a></li> -->
             <!-- <li><a href="pricing.html">Pricing</a></li> -->
             <li><a class="active" href="{% url 'blog' %}">Blog</a></li>
@@ -271,11 +271,12 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">My Skills</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'Templates' %}">My Projects</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'termsandconditions' %}">Terms & Conditions</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacypolicy' %}">Privacy policy</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'refundpolicy' %}">Refund policy</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="{% url 'refundpolicy' %}">Refund policy</a></li> -->
             </ul>
           </div>
 
@@ -296,7 +297,7 @@
 
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
+            <h4>Contact Me</h4>
             <p>
               Beeramguda<br>
               Hyderabad<br>
@@ -307,8 +308,8 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>About</h3>
-            <p>NAVIKONLINE is providing affordable digital solutions and services to its clients.</p>
+            <h3>About Me</h3>
+            <p>NAVIKONLINE is my personal portfolio to showcase skills. Would you like to talk?</p>
             <!-- <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -324,9 +325,15 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>NavikOnline</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Eterna</span></strong>. All Rights Reserved
       </div>
-    
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ -->
+        Designed by <a href="#">BootstrapMade</a>
+      </div>
     </div>
   </footer><!-- End Footer -->
 
