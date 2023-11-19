@@ -101,6 +101,7 @@
       scroll-behavior: smooth
     }
   </style>
+  
   <style data-tag="default-style-sheet">
     html {
       font-family: Inter;
@@ -119,10 +120,12 @@
 
     }
   </style>
+  
   <link rel="shortcut icon" href="{% static 'assets/img/NAVIK.png' %}" type="icon/png" sizes="32x32" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CRaleway:300,300i,400,400i,500,500i,600,600i,700,700i%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     data-tag="font" />
+  
   <style>
     [data-thq="thq-dropdown"]:hover>[data-thq="thq-dropdown-list"] {
       display: flex;
@@ -147,9 +150,11 @@
           </div>
           <div class="home-container04">
             <span class="home-text01">
-              <span>Convert Your Visual Designs Into</span>
+              <span>Convert Your Visual Design</span>
               <br />
-              <span>Perfect Codes For Free!</span>
+              <span>Into Perfect Codes For Free By Reading</span>
+              <br />
+              <span>High Quality Articles!</span>
             </span>
           </div>
         </div>
@@ -206,13 +211,15 @@
           <span class="home-text12">
             <span>Convert Your Visual Design</span>
             <br />
-            <span>Into Perfect Codes for Free!</span>
+            <span>Into Perfect Codes For Free By Reading</span>
+            <br />
+            <span>High Quality Articles!</span>
           </span>
         </div>
         <div class="home-container11">
           <span class="home-text16">Create Account</span>
         </div>
-        <div class="home-container12">
+        <!-- <div class="home-container12">
           <div class="home-container13">
             <button type="button" class="home-button button">
               <svg viewBox="0 0 1024 1024" class="home-icon2">
@@ -231,7 +238,7 @@
               <span>SignUp With Github</span>
             </button>
           </div>
-        </div>
+        </div> -->
         <div class="home-container14">
             {% for message in messages %}
             <h5>{{message}}</h5>

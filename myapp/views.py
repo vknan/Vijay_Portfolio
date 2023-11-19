@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 # Create your views here.
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, auth
@@ -11,55 +11,7 @@ from .forms import CustomPasswordResetForm
 import os
 # from payu import PayUmoneySdk
 
-
-class login_functionality:
-    @staticmethod
-    def register(request):
-        if request.method == 'POST':
-            username = request.POST['username']
-            email = request.POST['email']
-            password = request.POST['password']
-            password2 = request.POST['password2']
-            if password == password2:
-                if User.objects.filter(email=email).exists():
-                    messages.info(request, "Email already Used")
-                    return redirect('register')
-                elif User.objects.filter(username=username).exists():
-                    messages.info(request, 'Username Already Used')
-                    return redirect('register')
-                else:
-                    user = User.objects.create_user(username = username, email =email, password = password)
-                    user.save()
-                    return redirect('login')
-            else:
-                messages.info(request, 'Password Not The Same')
-                return redirect('register')
-        return render(request, 'templates/login_func/register.html')
-    @staticmethod
-    def login(request):
-        url = request.get_full_path()
-        print(url)
-        if (request.method == 'POST') :
-            username = request.POST['username']
-            password = request.POST['password']
-            user = auth.authenticate(username = username, password = password)
-
-            if user is not None:
-                auth.login(request, user)
-                customer, created = Customer.objects.get_or_create(user=user)
-                return redirect('dashboard')
-            else:
-                messages.info(request, 'Credentials Invalid')
-                return redirect('login')
-            return render(request, 'templates/login_func/login.html')
-        else:
-            return render(request, 'templates/login_func/login.html')
-
-    @staticmethod
-    def logout(request):
-        auth.logout(request)
-        return redirect('/')
-
+#==============================Without Login============================
 class pages:
     @staticmethod
     def home(request):
@@ -178,16 +130,67 @@ class pages:
     def refundpolicy(request):
         return render(request, 'templates/pages/refund_policy.html')
     
-    @staticmethod
-    @login_required
-    def dashboard(request):
-        return render(request, 'reactbuilder/build/index.html')
+    # @staticmethod
+    # @login_required
+    # def dashboard(request):
+    #     return render(request, 'reactbuilder/build/index.html')
 
+
+#==========================================================================
+
+class login_functionality(pages):
+    @staticmethod
+    def register(request):
+        if request.method == 'POST':
+            username = request.POST['username']
+            email = request.POST['email']
+            password = request.POST['password']
+            password2 = request.POST['password2']
+            if password == password2:
+                if User.objects.filter(email=email).exists():
+                    messages.info(request, "Email already Used")
+                    return redirect('register')
+                elif User.objects.filter(username=username).exists():
+                    messages.info(request, 'Username Already Used')
+                    return redirect('register')
+                else:
+                    user = User.objects.create_user(username = username, email =email, password = password)
+                    user.save()
+                    return redirect('login')
+            else:
+                messages.info(request, 'Password Not The Same')
+                return redirect('register')
+        return render(request, 'templates/login_func/register.html')
+    @staticmethod
+    def login(request):
+        url = request.get_full_path()
+        print(url)
+        if (request.method == 'POST') :
+            username = request.POST['username']
+            password = request.POST['password']
+            user = auth.authenticate(username = username, password = password)
+
+            if user is not None:
+                auth.login(request, user)
+                customer, created = Customer.objects.get_or_create(user=user)
+                return redirect('home')
+            else:
+                messages.info(request, 'Credentials Invalid')
+                return redirect('login')
+            return render(request, 'templates/login_func/login.html')
+        else:
+            return render(request, 'templates/login_func/login.html')
+
+    @staticmethod
+    def customlogout(request):
+        auth.logout(request)
+        return redirect ('customlogout')
+        
 
 
 
 #--------------------------------------------------------------------------------------------------
-# ================================Not Required Code==================================================
+# ================================Required Code==================================================
 
 class PaymentProcess:
     @login_required
@@ -280,7 +283,7 @@ class PaymentProcess:
         # Redirect to checkout page if not a POST request
         return redirect('checkout')
 
-
+    # @login_required
     # def payment_success(request):
     #     if request.method == 'POST':
     #         # Get the payment response from PayUmoney
