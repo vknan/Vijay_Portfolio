@@ -65,7 +65,7 @@
       </div>
 
       <nav id="navbar" class="navbar">
-        
+
           {% if user.is_authenticated %}
           <ul>
             <li><a href="/">Home</a></li>
@@ -103,7 +103,7 @@
             <li><a href="{% url 'register' %}">Login/Register</a></li>
           </ul>
           {% endif %}
-         
+
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
     </div>
@@ -132,7 +132,7 @@
         <div class="row">
 
           <div class="col-lg-8 entries">
-            
+
 
             {% for post in posts %}
             <article class="entry">
@@ -168,7 +168,7 @@
           </div>
           <div class="col-lg-4">
             <div class="sidebar">
-  
+
               <h3 class="sidebar-title">Search</h3>
               <div class="sidebar-item search-form">
                 <form action="/search/" method="GET">{% csrf_token %}
@@ -176,7 +176,7 @@
                   <button type="submit"><i class="bi bi-search"></i></button>
                 </form>
               </div><!-- End sidebar search formn-->
-  
+
               <h3 class="sidebar-title">Categories</h3>
               <div class="sidebar-item categories">
                 <ul>
@@ -185,7 +185,7 @@
                   {% endfor %}
                 </ul>
               </div><!-- End sidebar categories-->
-  
+
               <h3 class="sidebar-title">Recent Posts</h3>
               <div class="sidebar-item recent-posts">
                 {% for post in posts %}
@@ -196,9 +196,9 @@
                 </div>
                 {% endfor %}
               </div>
-  
-              
-  
+
+
+
               <!-- <h3 class="sidebar-title">Tags</h3>
               <div class="sidebar-item tags">
                 <ul>
@@ -215,15 +215,15 @@
                   <li><a href="#">Marketing</a></li>
                 </ul>
               </div>End sidebar tags -->
-  
+
             </div><!-- End sidebar -->
           </div>
         </div>
-        
-          
+
+
       </div>
 
-    </div>
+
     </section><!-- End Blog Section -->
     <div class="pagination" >
       <span class="step-links" >
@@ -231,11 +231,11 @@
               <a href="?page=1">&laquo; first</a>
               <a href="?page={{ posts.previous_page_number }}">previous</a>
           {% endif %}
-  
+
           <span class="current">
               Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
           </span>
-  
+
           {% if posts.has_next %}
               <a href="?page={{ posts.next_page_number }}">next</a>
               <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>

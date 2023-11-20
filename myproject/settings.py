@@ -23,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-*%#@vegjt5vdg)rg$h63ebp-3kyimzxb8=*%b%0cg8osa^z36c-^"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-# ALLOWED_HOSTS = ['vknan.pythonanywhere.com', '127.0.0.1', 'localhost',]
+ALLOWED_HOSTS = ['vknan.pythonanywhere.com']
 
-ALLOWED_HOSTS =['127.0.0.1',]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    
+
 ]
 
 ROOT_URLCONF = "myproject.urls"
@@ -117,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = "en-us"
 LANGUAGES = [
     ('en', 'English'),
-    
+
     # Add other languages you want to support
 ]
 
