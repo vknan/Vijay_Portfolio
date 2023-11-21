@@ -88,11 +88,6 @@ class Contact(models.Model):
         verbose_name_plural = ('Contacts')
 
 
-#---------------------------------------------------------
-
-
-
-
 class ProductCategory(models.Model):
     name = models.CharField(max_length=255)
 

@@ -121,14 +121,14 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 {% if user.is_authenticated %}
-                {% for message in messages %}
+                <!-- {% for message in messages %}
                 <h3>{{message}}</h3>
                 <a href="{% url 'file_detail' file_id=file_id %}" class="btn-get-started animate__animated animate__fadeInUp">Download</a>
-                {% endfor %}
+                {% endfor %} -->
                 <h2 class="animate__animated animate__fadeInDown">Welcome, <span>{{user.username}}</span></h2>
-                <a href="{% url 'Templates' %}" class="btn-get-started animate__animated animate__fadeInUp">Browse Templates</a>
+                <a href="{% url 'blog' %}" class="btn-get-started animate__animated animate__fadeInUp">Ready to Learn?</a>
                 {% else %}
-                <h2 class="animate__animated animate__fadeInDown">My Personal<span> Portfolio</span></h2>
+                <h2 class="animate__animated animate__fadeInDown">My<span> Portfolio</span></h2>
                 <p class="animate__animated animate__fadeInUp">Want to talk?</p>
                 <a href="{% url 'contact' %}" class="btn-get-started animate__animated animate__fadeInUp">Contact Me</a>
                 {% endif %}
