@@ -195,8 +195,10 @@
             <p>Subscribe to my news letter for More Updates</p>
           </div>
           <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+            <form action="{% url 'subscribe' %}" method="post">
+              {% csrf_token %}
+              <input type="email" name="email">
+              <input type="submit" value="Subscribe">
             </form>
           </div>
         </div>
