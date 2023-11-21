@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-*%#@vegjt5vdg)rg$h63ebp-3kyimzxb8=*%b%0cg8osa^z36c-^"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['vknan.pythonanywhere.com']
+ALLOWED_HOSTS = ['vknan.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -65,7 +65,7 @@ ROOT_URLCONF = "myproject.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR, 'templates', 'reactbuilder/build'],
+        "DIRS": [BASE_DIR, 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -131,10 +131,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "static/"
-STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static'), os.path.join(BASE_DIR, 'reactbuilder/build/static'),]
+STATIC_URL = "/static/"
+STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static'),]
 # print(STATICFILES_DIRS)
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 # print(STATIC_ROOT)
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
