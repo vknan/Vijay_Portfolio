@@ -5,8 +5,6 @@ from ckeditor.fields import RichTextField
 from django_ckeditor_5.fields import CKEditor5Field
 
 # Create your models here.
- 
-
 
 class Article(models.Model):
     title=models.CharField('Title', max_length=200)
@@ -119,7 +117,7 @@ class Product(models.Model):
 
 
 class Customer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null = False)
     name = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=20)
