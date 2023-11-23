@@ -28,11 +28,11 @@ urlpatterns = [
     # path('accounts/password-reset/complete/', auth_views.PasswordResetCompleteView.as_view(template_name='templates/login_func/password_reset_complete.html'), name='password_reset_complete'),
     
     
-    path('download_file/<int:file_id>/', views.PaymentProcess.download_file, name = 'download_file'),
-    path('file_detail/<int:file_id>/', views.PaymentProcess.file_detail, name = 'file_detail'),
-    path('checkout/', views.PaymentProcess.checkout, name = 'checkout'),
-    path('process_order/', views.PaymentProcess.process_order, name = 'process_order'),
-    path('placed_order/<int:file_id>/', views.PaymentProcess.placed_order, name = 'placed_order'),
+    # path('download_file/<int:file_id>/', views.PaymentProcess.download_file, name = 'download_file'),
+    # path('file_detail/<int:file_id>/', views.PaymentProcess.file_detail, name = 'file_detail'),
+    # path('checkout/', views.PaymentProcess.checkout, name = 'checkout'),
+    # path('process_order/', views.PaymentProcess.process_order, name = 'process_order'),
+    # path('placed_order/<int:file_id>/', views.PaymentProcess.placed_order, name = 'placed_order'),
 
     # path('dashboard/', views.pages.dashboard, name='dashboard'),
     

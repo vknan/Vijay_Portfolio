@@ -26,7 +26,7 @@ urlpatterns = [
     path('newsletter/', include('newsletters.urls')), 
     # path('', include('cms.urls')), 
     path('accounts/', include('django.contrib.auth.urls')),
-    re_path(r'^download/(?P<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT}),
+    # re_path(r'^download/(?P<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT}),
 ]
 
 # urlpatterns += [
