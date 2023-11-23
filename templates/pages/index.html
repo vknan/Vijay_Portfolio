@@ -3,31 +3,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
   <title>NAVIKONLINE</title>
-  <meta content="Personal Portfolio Project" name="Navikonline is my personal portfolio showcasing my skills, Want to talk?">
-  <meta content="Software Engineer & Designer" name="Designer, Engineer, Hire Me">
+  <meta content="Personal Portfolio Project"
+    name="Navikonline is my personal portfolio showcasing my skills, Want to talk?" />
+  <meta content="Software Engineer & Designer" name="Designer, Engineer, Hire Me" />
 
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon" />
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
 
   <!-- =======================================================
   * Template Name: Eterna - v4.10.0
@@ -43,7 +46,8 @@
   <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:jobs.vijaykrishna@gmail.com">jobs.vijaykrishna@gmail.com</a></i>
+        <i class="bi bi-envelope d-flex align-items-center"><a
+            href="mailto:jobs.vijaykrishna@gmail.com">jobs.vijaykrishna@gmail.com</a></i>
         <!-- <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 123456789</span></i> -->
       </div>
       <!-- <div class="social-links d-none d-md-flex align-items-center">
@@ -60,7 +64,7 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
-        <h1><a href="/"><img src="{% static 'assets/img/logo.png' %}" alt="logo"/></a></h1>
+        <h1><a href="/"><img src="{% static 'assets/img/logo.png' %}" alt="logo" /></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="/"><img src="{% static 'assets/img/NAVIK.png' %}" alt="" class="img-fluid"></a> -->
       </div>
@@ -69,14 +73,14 @@
         <ul>
           {% if user.is_authenticated %}
           <li><a class="active" href="/">Home</a></li>
-          <li class="dropdown">
+          <li>
             <a href="{% url 'blog' %}">
-              <span>Categories</span> 
-              <i class="bi bi-chevron-down"></i>
+              <span>Blog</span>
+              <!-- <i class="bi bi-chevron-down"></i> -->
             </a>
             <ul>
               {% for category in categories %}
-                <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
+              <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
               {% endfor %}
             </ul>
           </li>
@@ -84,19 +88,19 @@
           <li><a href="{% url 'logout' %}">Logout</a></li>
           {% else %}
           <li><a class="active" href="/">Home</a></li>
-          <li><a href="{% url 'about' %}" >About</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'services' %}">My Skills</a></li>
           <li><a href="{% url 'Templates' %}">My Projects</a></li>
           <!-- <li><a href="team.html">Team</a></li> -->
           <!-- <li><a href="pricing.html">Pricing</a></li> -->
-          <li class="dropdown">
+          <li>
             <a href="{% url 'blog' %}">
-              <span>Categories</span> 
-              <i class="bi bi-chevron-down"></i>
+              <span>Blog</span>
+              <!-- <i class="bi bi-chevron-down"></i> -->
             </a>
             <ul>
               {% for category in categories %}
-                <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
+              <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
               {% endfor %}
             </ul>
           </li>
@@ -146,7 +150,8 @@
                 <a href="{% url 'file_detail' file_id=file_id %}" class="btn-get-started animate__animated animate__fadeInUp">Download</a>
                 {% endfor %} -->
                 <h2 class="animate__animated animate__fadeInDown">Welcome, <span>{{user.username}}</span></h2>
-                <a href="{% url 'blog' %}" class="btn-get-started animate__animated animate__fadeInUp">Ready to Learn?</a>
+                <a href="{% url 'blog' %}" class="btn-get-started animate__animated animate__fadeInUp">Ready to
+                  Learn?</a>
                 {% else %}
                 <h2 class="animate__animated animate__fadeInDown">My<span> Portfolio</span></h2>
                 <p class="animate__animated animate__fadeInUp">Want to talk?</p>
@@ -226,7 +231,7 @@
     </section><!-- End Featured Section -->
 
     <!-- ======= About Section ======= -->
-   <section id="about" class="about">
+    <section id="about" class="about">
       <div class="container">
 
         <div class="row">
@@ -248,8 +253,8 @@
               <li><i class="bi bi-check-circle"></i> Content Creation</li>
               <li><i class="bi bi-check-circle"></i> Video Editing</li>
               <li><i class="bi bi-check-circle"></i> Digital Marketing Strategy</li>
-              
-              
+
+
             </ul>
             <p>
               For More information, check below.
@@ -258,21 +263,22 @@
         </div>
 
       </div>
-    </section> 
+    </section>
     <!-- End About Section -->
 
     <!-- ======= Services Section ======= -->
-     <section id="services" class="services">
+    <section id="services" class="services">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-99designs"></i></div>
               <h4><a href="">Graphic Designing</a></h4>
-              <p>Provide All kinds of Graphic Design works like Brochure Design, Flyer Design, Logo Design, etc., for Marketing. </p>
+              <p>Provide All kinds of Graphic Design works like Brochure Design, Flyer Design, Logo Design, etc., for
+                Marketing. </p>
             </div>
           </div>
-      
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-desktop"></i></div>
@@ -280,7 +286,7 @@
               <p>Provide a Digital Presence by Website Design and Development for Small Businesses, Individuals. </p>
             </div>
           </div>
-      
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dev-to"></i></div>
@@ -289,7 +295,7 @@
             </div>
           </div>
         </div> <!-- Close the first row here -->
-      
+
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
@@ -298,7 +304,7 @@
               <p>Provide an intuitive UI/UX Design service for Small Businesses and Individuals.</p>
             </div>
           </div>
-      
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-99designs"></i></div>
@@ -306,7 +312,7 @@
               <p>Provide Online Branding for your business with my LOGO Design Services. </p>
             </div>
           </div>
-      
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-user"></i></div>
@@ -315,7 +321,7 @@
             </div>
           </div>
         </div> <!-- Close the second row here -->
-      
+
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
@@ -324,15 +330,16 @@
               <p>Provide digital content for your blogs, articles, websites with my research based service. </p>
             </div>
           </div>
-      
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-photo-album"></i></div>
               <h4><a href="">Photo/Video Editing</a></h4>
-              <p>Professional Photo/Video Editing services for Businesses, Individuals in Marketing Campaigns or Events. </p>
+              <p>Professional Photo/Video Editing services for Businesses, Individuals in Marketing Campaigns or Events.
+              </p>
             </div>
           </div>
-      
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bxs-business"></i></div>
@@ -342,13 +349,13 @@
           </div>
         </div> <!-- Close the third row here -->
       </div>
-      
+
     </section>
-    
+
     <!-- End Services Section -->
 
     <!-- ======= Clients Section ======= -->
-     <section id="clients" class="clients">
+    <section id="clients" class="clients">
       <div class="container">
 
         <div class="section-title">
@@ -358,7 +365,8 @@
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/Sakasi.jpeg' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/Sakasi.jpeg' %}" class="img-fluid" alt="">
+            </div>
             <!-- <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div> 
             <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
@@ -371,12 +379,12 @@
         </div>
 
       </div>
-    </section> 
-    
+    </section>
+
     <!-- End Clients Section-->
 
   </main>
-  
+
   <!-- #End main -->
 
   <!-- ======= Footer ======= -->
@@ -411,7 +419,8 @@
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About Me</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">My Skills</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'Templates' %}">My Projects</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'termsandconditions' %}">Terms & Conditions</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'termsandconditions' %}">Terms & Conditions</a>
+              </li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacypolicy' %}">Privacy policy</a></li>
               <!-- <li><i class="bx bx-chevron-right"></i> <a href="{% url 'refundpolicy' %}">Refund policy</a></li> -->
             </ul>
@@ -473,7 +482,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
