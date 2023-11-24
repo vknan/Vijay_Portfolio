@@ -70,12 +70,10 @@ class pages:
     
     @staticmethod
     def blog_single(request, title):
-
-        posts = Post.objects.get(title = title)
+        posts = Post.objects.get(title = title, is_published=True)
         recent_posts = Post.objects.filter(is_published=True).order_by('-posted_at')[:5]
         Categories = Category.objects.all()
         comments = Comment.objects.filter(post = posts)
-        
         context = {'posts':posts, 'recent_posts':recent_posts , 'Categories': Categories, 'comments':comments}
         return render(request, 'templates/pages/blog-single.html', context)
     @staticmethod
