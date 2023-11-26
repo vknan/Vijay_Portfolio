@@ -51,7 +51,7 @@ class pages:
     @staticmethod
     def blog(request):
         category_name = request.GET.get('category')
-        posts = Post.objects.filter(is_published=True)
+        posts = Post.objects.filter(is_published=True).order_by('-posted_at')
         
         if category_name:
             posts = posts.filter(category__name=category_name)
