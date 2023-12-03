@@ -23,7 +23,7 @@ class pages:
             'feature3': features[2] if len(features) > 2 else None,
             'products': products
         }
-        return render(request, 'templates/pages/index.html', context)
+        return render(request, 'pages/index.html', context)
 
     # def password_reset(request):
     #     form = CustomPasswordResetForm()
@@ -36,17 +36,17 @@ class pages:
     #     return render(request, 'blog-single.html', {'posts': posts})
     @staticmethod
     def about(request):
-        return render(request, 'templates/pages/about.html')
+        return render(request, 'pages/about.html')
     
     @staticmethod
     def services(request):
-        return render(request, 'templates/pages/services.html')
+        return render(request, 'pages/services.html')
 
     @staticmethod
     def Templates(request):
         p1 = Product.objects.all()
         context = {'products': p1}
-        return render(request, 'templates/pages/Templates.html', context)
+        return render(request, 'pages/Templates.html', context)
     
     @staticmethod
     def blog(request):
@@ -66,7 +66,7 @@ class pages:
             'posts': posts,
             'categories': categories
         }
-        return render(request, 'templates/pages/blog.html', context)
+        return render(request, 'pages/blog.html', context)
     
     @staticmethod
     def blog_single(request, title):
@@ -75,7 +75,7 @@ class pages:
         Categories = Category.objects.all()
         comments = Comment.objects.filter(post = posts)
         context = {'posts':posts, 'recent_posts':recent_posts , 'Categories': Categories, 'comments':comments}
-        return render(request, 'templates/pages/blog-single.html', context)
+        return render(request, 'pages/blog-single.html', context)
     @staticmethod
     def search(request):
         search_query = request.GET.get('q')
@@ -83,7 +83,7 @@ class pages:
         context = {
             'posts':posts
             }
-        return render(request, 'templates/pages/blog.html', context)
+        return render(request, 'pages/blog.html', context)
         # rest of the view code
     
     @staticmethod
@@ -96,7 +96,7 @@ class pages:
             c= Contact(name = name, email=email, subject= subject, message=message)
             c.save()
             return redirect('contact')
-        return render(request, 'templates/pages/contact.html')
+        return render(request, 'pages/contact.html')
     
     @staticmethod
     @login_required
@@ -120,13 +120,13 @@ class pages:
 
     @staticmethod
     def termsandconditions(request):
-        return render(request, 'templates/pages/terms_and_conditions.html')
+        return render(request, 'pages/terms_and_conditions.html')
     @staticmethod
     def privacypolicy(request):
-        return render(request, 'templates/pages/privacy_policy.html')
+        return render(request, 'pages/privacy_policy.html')
     @staticmethod
     def refundpolicy(request):
-        return render(request, 'templates/pages/refund_policy.html')
+        return render(request, 'pages/refund_policy.html')
     
     # @staticmethod
     # @login_required
@@ -158,7 +158,7 @@ class login_functionality(pages):
             else:
                 messages.info(request, 'Password Not The Same')
                 return redirect('register')
-        return render(request, 'templates/login_func/register.html')
+        return render(request, 'login_func/register.html')
     @staticmethod
     def login(request):
         url = request.get_full_path()
@@ -175,9 +175,9 @@ class login_functionality(pages):
             else:
                 messages.info(request, 'Credentials Invalid')
                 return redirect('login')
-            return render(request, 'templates/login_func/login.html')
+            # return render(request, '/myproject/templates/login_func/login.html')
         else:
-            return render(request, 'templates/login_func/login.html')
+            return render(request, 'login_func/login.html')
 
     @staticmethod
     def customlogout(request):
