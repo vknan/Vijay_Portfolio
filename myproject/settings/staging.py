@@ -4,5 +4,5 @@ from .base import *
 
 # Override base settings for staging
 
-DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'navikonline.in', 'www.navikonline.in', '192.168.1.7']
+DEBUG = False
+ALLOWED_HOSTS = ['127.0.0.1', 'navikonline.in', 'www.navikonline.in', '192.168.1.5', 'fe80::336f:ed6f:3485:4aeb']
