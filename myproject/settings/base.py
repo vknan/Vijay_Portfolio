@@ -14,16 +14,15 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = '/home/naresh-vijay-n/Vijay_Portfolio/'
-# print(BASE_DIR)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-*%#@vegjt5vdg_rg$h63ebp-3kyimzxb8=*%b%0cg8osa^z36c-^.-"
-
+import secrets
+SECRET_KEY = secrets.token_urlsafe(50)
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -69,7 +68,7 @@ ROOT_URLCONF = "myproject.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, 'Vijay_Portfolio/myproject/templates')],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -90,7 +89,7 @@ WSGI_APPLICATION = "myproject.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "Vijay_Portfolio/myproject/db.sqlite3"),
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
     }
 }
 
@@ -136,12 +135,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'Vijay_Portfolio/myproject/static/'),
+    os.path.join(BASE_DIR, 'static/'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'Vijay_Portfolio/myproject/assets/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets/')
 # Media files (uploads)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'Vijay_Portfolio/myproject/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -153,10 +152,24 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #     'django.contrib.auth.backends.ModelBackend',
 # ]
 #-----------------------SSL Config--------------------------------------------------------------------------------
-SECURE_SSL_REDIRECT = True
-SECURE_SSL_HOST = 'navikonline.in'
-SECURE_SSL_PORT = 443
-#----------------------------------------------------------------------------------------------------------
+# SECURE_SSL_REDIRECT = True
+# SECURE_SSL_HOST = 'navikonline.in'
+# SECURE_SSL_PORT = 443
+# #----------------------------------------------------------------------------------------------------------
+
+# # Enable HSTS preload
+# SECURE_HSTS_PRELOAD = True
+
+# # Enable HSTS for 1 year (adjust as needed)
+# SECURE_HSTS_SECONDS = 31536000
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+
+# # Enable secure-only session cookie
+# SESSION_COOKIE_SECURE = True
+
+# # Enable secure-only CSRF cookie
+# CSRF_COOKIE_SECURE = True
 
 # This below settings are related to ckeditor-5
 #----------------------------------------------------------------------------------------------------------------------------
