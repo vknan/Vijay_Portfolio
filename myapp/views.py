@@ -6,7 +6,7 @@ from django.contrib import messages
 
 from .models import *
 from django.core.paginator import Paginator
-from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.http import HttpResponse, Http404, HttpResponseRedirect, HttpResponseServerError
 # from .forms import CustomPasswordResetForm
 import os
 # from payu import PayUmoneySdk
@@ -88,15 +88,19 @@ class pages:
     
     @staticmethod
     def contact(request):
-        if request.method == 'POST':
-            name = request.POST.get('name')
-            email = request.POST.get('email')
-            subject = request.POST.get('subject')
-            message = request.POST.get('message')
-            c= Contact(name = name, email=email, subject= subject, message=message)
-            c.save()
-            return redirect('contact')
-        return render(request, 'pages/contact.html')
+        context = {}
+        try:
+            if request.method == 'POST':
+                name = request.POST.get('name')
+                email = request.POST.get('email')
+                subject = request.POST.get('subject')
+                message = request.POST.get('message')
+                c = Contact(name = name, email=email, subject= subject, message=message)
+                c.save()
+        except Exception as e:
+            context['error_message'] = f'An error occurred: {str(e)}'
+            return HttpResponseServerError('Internal Server Error')
+        return render(request, 'pages/contact.html', {'sent_message': 'Your message has been sent. Thank you!'})
     
     @staticmethod
     @login_required
