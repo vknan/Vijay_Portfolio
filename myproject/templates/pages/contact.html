@@ -163,7 +163,7 @@
           </div> -->
 
           <div class="col-lg-6">
-            <form action='' method="POST" role="form" class="php-email-form">
+            <form action='{% url "contact" %}' method="POST" role="form" class="php-email-form">
               {% csrf_token %}
               <div class="row">
                 <div class="col-md-6 form-group">
