@@ -1,0 +1,129 @@
+
+
+/* Set default font family and size */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Set width of gallery and center it */
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  /* Set width of each product card and space between them */
+  .content {
+    width: calc(25% - 20px);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Set style for product image */
+  .content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Set style for product title */
+  .content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Set style for product description */
+  .content p {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Set style for product price */
+  .content h6 {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Set style for product rating */
+  .content ul {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Set style for checked stars */
+  .content ul li .fa-star.checked {
+    color: gold;
+  }
+  
+  /* Set style for unchecked stars */
+  .content ul li .fa-star {
+    color: #ccc;
+  }
+  
+  /* Set media queries for responsive design */
+  @media screen and (max-width: 768px) {
+    .content {
+      width: calc(50%-20px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .content {
+      width: 100%;
+    }
+  }
+  
+  
+  .content:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+  }
+  
+  
+  .buy-btn {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .buy-btn:hover {
+    background-color: #0062cc;
+  }
+  
+  .demo-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .demo-link:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  

@@ -26,9 +26,9 @@ SECRET_KEY = secrets.token_urlsafe(50)
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['navikonline.in', '127.0.0.1']
 
 
 # Application definition
@@ -134,10 +134,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/'),
-]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'assets/')
+# In development
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
+
+# In production
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets/')
+
 # Media files (uploads)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
