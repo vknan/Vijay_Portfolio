@@ -160,7 +160,7 @@
    */
   new Swiper('.clients-slider', {
     speed: 400,
-    loop: false,
+    loop: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false
