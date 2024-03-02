@@ -7,7 +7,9 @@ urlpatterns = [
     path('accounts/login/', views.login_functionality.login, name = 'login'),
     # path('logout/', views.login_functionality.logout, name = 'logout'),
     path('customlogout/', views.login_functionality.customlogout, name='custom_logout'),
-
+    
+    
+    path('analytics/', views.pages.analytics_view, name='user-analytics'),
     path('', views.pages.home, name = 'home'),
     path('about/', views.pages.about, name = 'about'),
     path('services/', views.pages.services, name = 'services'),
@@ -20,7 +22,7 @@ urlpatterns = [
     path('termsandconditions/', views.pages.termsandconditions, name = 'termsandconditions'),
     path('privacypolicy/', views.pages.privacypolicy, name = 'privacypolicy'),
     path('refundpolicy/', views.pages.refundpolicy, name = 'refundpolicy'),
-
+    
 
     # path('accounts/password-reset/', auth_views.PasswordResetView.as_view(template_name='templates/login_func/password_reset.html'), name='password_reset'),
     # path('accounts/password-reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='templates/login_func/password_reset_done.html'), name='password_reset_done'),

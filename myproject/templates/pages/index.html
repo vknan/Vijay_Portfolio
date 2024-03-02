@@ -3,502 +3,696 @@
 <html lang="en">
 
 <head>
+  <title>Navikonline</title>
+  <meta property="og:title" content="Navikonline" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
-  <title>NAVIKONLINE</title>
-  <meta content="Personal Portfolio Project"
-    name="Navikonline is my personal portfolio showcasing my skills, Want to talk?" />
-  <meta content="Software Engineer & Designer" name="Designer, Engineer, Hire Me" />
-
-
+  <meta property="twitter:card" content="summary_large_image" />
   <!-- Favicons -->
   <link href="{% static 'assets/img/favicon.png' %}" rel="icon" />
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet" >
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet" >
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" >
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" >
-  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet" >
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" >
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" >
+    body {
+      margin: 0;
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" >
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
 
-  <!-- =======================================================
-  * Template Name: Eterna - v4.10.0
-  * Template URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8289726439355345"crossorigin="anonymous"></script>
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: Inter;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.15;
+      color: var(--dl-color-gray-black);
+      background-color: var(--dl-color-gray-white);
+
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+  <link rel="shortcut icon" href="{% static 'assets/img/logo.png' %}" type="icon/png" sizes="32x32" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+  <!-- <style>
+    [data-thq="thq-dropdown"]:hover>[data-thq="thq-dropdown-list"] {
+      display: flex;
+    }
+
+    [data-thq="thq-dropdown"]:hover>div [data-thq="thq-dropdown-arrow"] {
+      transform: rotate(90deg);
+    }
+  </style> -->
 </head>
 
 <body>
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+  <div>
+    <link href="{% static 'assets/css/index.css' %}" rel="stylesheet" />
+    <script type="text/javascript"
+      src="https://unpkg.com/@lottiefiles/lottie-player@1.6.0/dist/lottie-player.js"></script>
 
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@navikonline.in">info@navikonline.in</a></i>
-
-        <!-- <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 123456789</span></i> -->
+    <div class="home-container">
+      <div class="home-container01">
+        <div class="home-container02">
+          <svg viewBox="0 0 1024 1024" class="home-icon">
+            <path
+              d="M854 342v-86l-342 214-342-214v86l342 212zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z">
+            </path>
+          </svg>
+          <span class="home-text"><a href="mailto:info@navikonline.in">info@navikonline.in</a></span>
+        </div>
       </div>
-      <!-- <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div> -->
-    </div>
-  </section>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-between align-items-center">
-
-      <div class="logo">
-        <h1><a href="/"><img src="{% static 'assets/img/logo.png' %}" alt="logo" /></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="/"><img src="{% static '/img/NAVIK.png' %}" alt="" class="img-fluid"></a> -->
+      <div class="home-container03">
+        <div class="home-container04">
+          <!-- <div data-thq="thq-dropdown" class="home-thq-dropdown list-item">
+            <ul data-thq="thq-dropdown-list" class="home-dropdown-list">
+              <li data-thq="thq-dropdown" class="home-dropdown list-item">
+                <div data-thq="thq-dropdown-toggle" class="home-dropdown-toggle">
+                  <span class="home-text001">Sub-menu Item</span>
+                </div>
+              </li>
+              <li data-thq="thq-dropdown" class="home-dropdown1 list-item">
+                <div data-thq="thq-dropdown-toggle" class="home-dropdown-toggle1">
+                  <span class="home-text002">Sub-menu Item</span>
+                </div>
+              </li>
+              <li data-thq="thq-dropdown" class="home-dropdown2 list-item">
+                <div data-thq="thq-dropdown-toggle" class="home-dropdown-toggle2">
+                  <span class="home-text003">Sub-menu Item</span>
+                </div>
+              </li>
+            </ul>
+          </div> -->
+          <a href="https://navikonline.in"  rel="noreferrer noopener" class="home-link">
+            <img alt="image" src="{% static 'assets/img/logo.png' %}" class="home-image" />
+          </a>
+        </div>
+        <nav class="navigation-links-nav navigation-links-root-class-name19">
+          <a href="/" rel="noreferrer noopener" class="navigation-links-link">
+            <span>Home</span>
+          </a>
+          <a href="{% url 'about' %}" rel="noreferrer noopener" class="navigation-links-link1">
+            <span>About</span>
+          </a>
+          <a href="https://example.com" rel="noreferrer noopener" class="navigation-links-link2">
+            <span>Courses</span>
+          </a>
+          <a href="https://example.com" rel="noreferrer noopener" class="navigation-links-link3">
+            <span>Community</span>
+          </a>
+          <a href="{% url 'blog' %}" rel="noreferrer noopener" class="navigation-links-link4">
+            <span>Blog</span>
+          </a>
+          <a href="{% url 'contact' %}" rel="noreferrer noopener" class="navigation-links-link5">
+            <span>contact</span>
+          </a>
+          <a href="{% url 'register' %}" rel="noreferrer noopener" class="navigation-links-link6">
+            <span>Login/Register</span>
+          </a>
+          <svg viewBox="0 0 1024 1024" class="navigation-links-icon">
+            <path d="M64 192h896v192h-896zM64 448h896v192h-896zM64 704h896v192h-896z"></path>
+          </svg>
+        </nav>
       </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          {% if user.is_authenticated %}
-          <li><a class="active" href="/">Home</a></li>
-          <li>
-            <a href="{% url 'blog' %}">
-              <span>Blog</span>
-              <!-- <i class="bi bi-chevron-down"></i> -->
-            </a>
-            <ul>
-              {% for category in categories %}
-              <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
-              {% endfor %}
-            </ul>
-          </li>
-          <li><a href="{% url 'Templates' %}">My Projects</a></li>
-          <li><a href="{% url 'logout' %}">Logout</a></li>
-          {% else %}
-          <li><a class="active" href="/">Home</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'services' %}">My Skills</a></li>
-          <li><a href="{% url 'Templates' %}">My Projects</a></li>
-          <!-- <li><a href="team.html">Team</a></li> -->
-          <!-- <li><a href="pricing.html">Pricing</a></li> -->
-          <li>
-            <a href="{% url 'blog' %}">
-              <span>Blog</span>
-              <!-- <i class="bi bi-chevron-down"></i> -->
-            </a>
-            <ul>
-              {% for category in categories %}
-              <li><a href="/blog/?category={{ category.name }}">{{ category.name }} </a></li>
-              {% endfor %}
-            </ul>
-          </li>
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+      <div class="home-container05"></div>
+      <div class="home-hero">
+        <div class="home-container06">
+          <div class="home-container07">
+            <div class="home-container08">
+              <div class="home-container09">
+                <h1 class="home-text004">Learn Anytime, Anywhere!</h1>
+              </div>
+              <span class="home-text005">
+                <span class="home-text006">Providing&nbsp;</span>
+                <span>Cutting-Edge</span>
+                <span>IT Solutions</span>
+                <br />
+              </span>
+            </div>
+            <div class="home-container10">
+              <div class="home-container11">
+                <input type="text" placeholder="Search to learn something..." class="home-textinput input" />
+                <button type="button" class="home-button button">
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <lottie-player src="https://lottie.host/ea77eb96-9627-4ee4-bfd0-5bb299f341c3/TzCE7HFC48.json" loop="true"
+          hover="true" speed="1" autoplay="true" background="transparent" class="home-lottie-node"></lottie-player>
+      </div>
+      <div class="home-container12">
+        <div class="home-container13">
+          <h1 class="home-text010">Courses</h1>
+        </div>
+      </div>
+      <div class="home-container14">
+        <div class="home-container15">
+          <div class="home-container16">
+            <div class="home-container17">
+              <div class="home-container18">
+                <a href="https://www.example.com" rel="noreferrer noopener" class="home-link1">
+                  <div class="home-feature-card">
+                    <lottie-player src="https://lottie.host/a8811818-ae36-4e37-a403-6c136d1bb4fc/nhGwKa3kRV.json"
+                      loop="true" speed="0.5" autoplay="true" background="transparent"
+                      class="home-lottie-node1"></lottie-player>
+                    <h2 class="home-text011">
+                      CSF: Computer Science Fundamentals
+                    </h2>
+                    <span class="home-text012">
+                      Learn the Solid Foundations of Computer Science at us
+                    </span>
+                    <span class="home-text013">SEE MORE</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.example.com" rel="noreferrer noopener" class="home-link2">
+          <div class="home-feature-card1">
+            <div class="home-container19">
+              <lottie-player src="https://lottie.host/1de72a90-338a-4a89-b5fb-1b8075ef6724/aqVpKBHkqu.json" loop="true"
+                speed="0.5" autoplay="true" background="transparent" class="home-lottie-node2"></lottie-player>
+            </div>
+            <h2 class="home-text014">
+              CSPY: Introduction to Python Programming
+            </h2>
+            <span class="home-text015">
+              Welcome to the World of Python Programming
+            </span>
+            <span class="home-text016">SEE MORE</span>
+          </div>
+        </a>
+      </div>
+      <div class="home-container20">
+        <a href="https://www.example.com" rel="noreferrer noopener" class="home-link3">
+          <div class="home-feature-card2">
+            <lottie-player src="https://lottie.host/fef610e5-2e5a-474d-a0e7-e982378b0f2c/x60CSNtRuV.json" loop="true"
+              speed="0.5" autoplay="true" background="transparent" class="home-lottie-node3"></lottie-player>
+            <h2 class="home-text017">
+              CSW: Introduction to Web Programming with Python and JavaScript
+            </h2>
+            <span class="home-text018">
+              Begin the Exciting Journey in Web Design &amp; Development
+            </span>
+            <span class="home-text019">SEE MORE</span>
+          </div>
+        </a>
+        <a href="https://www.example.com" rel="noreferrer noopener" class="home-link4">
+          <div class="home-feature-card3">
+            <lottie-player src="https://lottie.host/e0f20cd2-656f-4779-9444-e8bd9ebdb6b3/aGoP67cixZ.json" loop="true"
+              speed="0.5" autoplay="true" background="transparent" class="home-lottie-node4"></lottie-player>
+            <h2 class="home-text020">
+              CSAI: Introduction to Artificial Intelligence With Python
+            </h2>
+            <span class="home-text021">
+              Start Your Journey by understanding the Artificial Intelligence
+            </span>
+            <span class="home-text022">SEE MORE</span>
+          </div>
+        </a>
+      </div>
+      <div class="home-banner">
+        <h1 class="home-text023">Our Mission</h1>
+        <span class="home-text024">
+          <span>
+            <!-- <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+              volutpat turpis. Mauris luctus rutrum mi ut rhoncus. Integer in
+              dignissim tortor. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Sed non volutpat turpis. Mauris luctus rutrum
+              mi ut rhoncus. Integer in dignissim tortor. Sed non volutpat
+              turpis. Mauris luctus rutrum mi ut rhoncus. Integer in dignissim
+              ortor.
+            </span> -->
+            <span></span>
+          </span>
+        </span>
+        <span class="home-text028">
+          At Navikonline and IT Solutions, our mission is to revolutionize
+          education and drive digital excellence. We are dedicated to
+          providing an innovative and inclusive e-learning platform,
+          transcending boundaries to make knowledge universally accessible.
+          Simultaneously, we offer cutting-edge IT solutions, understanding
+          and addressing our clients' unique challenges, and guiding them
+          towards technological advancement. We aspire to foster continuous
+          learning, creativity, and critical thinking, empowering individuals
+          and organizations to thrive in an ever-evolving digital landscape
+          while delivering tailored IT solutions that enhance efficiency,
+          productivity, and competitiveness. Our commitment is to be the
+          catalyst for positive change, promoting holistic development through
+          education and technology integration.
+        </span>
+        <button class="home-button1 button">Read More</button>
+      </div>
+      <div class="home-stats">
+        <div class="home-stat">
+          <h1 class="home-text029">3+</h1>
+          <span class="home-text030">Happy clients</span>
+          <span class="home-text031">We Value Our Clients Satisfaction.</span>
+        </div>
+        <div class="home-stat1">
+          <h1 class="home-text032">16</h1>
+          <span class="home-text033">Projects completed</span>
+          <span class="home-text034">in total</span>
+        </div>
+        <div class="home-stat2">
+          <h1 class="home-text035">
+            <span>5</span>
+            <span>+</span>
+          </h1>
+          <span class="home-text038">Years</span>
+          <span class="home-text039">
+            Of Experience in GIS, Machine Learning, Web Development.
+          </span>
+        </div>
+        <div class="home-stat3">
+          <h1 class="home-text040"><span>24/7</span></h1>
+          <span class="home-text042">Support</span>
+          <span class="home-text043">We are available for your queries.</span>
+        </div>
+      </div>
+      <div class="home-container21">
+        <div class="home-steps">
+          <h1 class="home-text044">Our 4 Stage Process</h1>
+          <span class="home-text045">
+            <span>We Build Tech for Future</span>
+            <br />
+          </span>
+          <div class="home-container22">
+            <div class="home-step">
+              <div class="home-container23">
+                <div class="home-line"></div>
+                <div class="home-line01"></div>
+                <div class="home-container24">
+                  <svg viewBox="0 0 1024 1024" class="home-icon02">
+                    <path
+                      d="M634 558q92-64 92-174 0-88-63-151t-151-63-151 63-63 151q0 46 27 96t65 78l36 26v98h172v-98zM512 86q124 0 211 87t87 211q0 156-128 244v98q0 18-12 30t-30 12h-256q-18 0-30-12t-12-30v-98q-128-88-128-244 0-124 87-211t211-87zM384 896v-42h256v42q0 18-12 30t-30 12h-172q-18 0-30-12t-12-30z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="home-line02"></div>
+              </div>
+              <div class="home-container25">
+                <h1 class="home-text048"><span>Ideate</span></h1>
+                <div class="home-container26">
+                  <li class="list-item"></li>
+                  <span class="home-text050">
+                    Conduct market research to identify trends and user needs.
+                  </span>
+                </div>
+                <div class="home-container27">
+                  <li class="list-item"></li>
+                  <span class="home-text051">
+                    Brainstorming sessions to generate creative ideas.
+                  </span>
+                </div>
+                <div class="home-container28">
+                  <li class="list-item"></li>
+                  <span class="home-text052">
+                    Define the problem statement and set clear objectives.
+                  </span>
+                </div>
+                <div class="home-container29">
+                  <li class="list-item"></li>
+                  <span class="home-text053">
+                    Prioritize and select the most viable ideas.
+                  </span>
+                </div>
+                <div class="home-container30">
+                  <li class="list-item"></li>
+                  <span class="home-text054">
+                    Create rough prototypes or concepts to visualize potential
+                    solutions.
+                  </span>
+                </div>
+                <ul class="list">
+                  <li class="list-item"></li>
                 </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-          <li><a href="{% url 'register' %}">Login/Register</a></li>
-          {% endif %}
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-        <div class="carousel-inner" role="listbox">
-
-          <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url(/static/assets/img/slide/slide-1.jpg)">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                {% if user.is_authenticated %}
-                <!-- {% for message in messages %}
-                <h3>{{message}}</h3>
-                <a href="{% url 'file_detail' file_id=file_id %}" class="btn-get-started animate__animated animate__fadeInUp">Download</a>
-                {% endfor %} -->
-                <h2 class="animate__animated animate__fadeInDown">Welcome, <span>{{user.username}}</span></h2>
-                <a href="{% url 'blog' %}" class="btn-get-started animate__animated animate__fadeInUp">Ready to
-                  Learn?</a>
-                {% else %}
-                <h2 class="animate__animated animate__fadeInDown">Join Our<span> New Batch</span></h2>
-                <p class="animate__animated animate__fadeInUp">Courses Offered are Computer Science Fundamentals and Python Full Stack Course</p>
-                <p class="animate__animated animate__fadeInUp">Want to talk?</p>
-                <a href="{% url 'contact' %}" class="btn-get-started animate__animated animate__fadeInUp">Contact Me</a>
-                {% endif %}
+              </div>
+            </div>
+            <div class="home-step1">
+              <div class="home-container31">
+                <div class="home-line03"></div>
+                <div class="home-container32">
+                  <svg viewBox="0 0 1024 1024" class="home-icon04">
+                    <path
+                      d="M746 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM618 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM406 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM278 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 128q158 0 271 100t113 242q0 88-63 150t-151 62h-74q-28 0-46 19t-18 45q0 22 16 42t16 44q0 28-18 46t-46 18q-160 0-272-112t-112-272 112-272 272-112z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="home-line04"></div>
+              </div>
+              <div class="home-container33">
+                <h1 class="home-text055"><span>Design</span></h1>
+                <div class="home-container34">
+                  <li class="list-item"></li>
+                  <span class="home-text057">
+                    <span>
+                      Develop detailed user personas to understand the target
+                      audience.
+                    </span>
+                    <span></span>
+                  </span>
+                </div>
+                <div class="home-container35">
+                  <li class="list-item"></li>
+                  <span class="home-text060">
+                    <span>
+                      Create wireframes and mockups to illustrate the user
+                      interface.
+                    </span>
+                    <br />
+                  </span>
+                </div>
+                <div class="home-container36">
+                  <li class="list-item"></li>
+                  <span class="home-text063">
+                    Define the information architecture and navigation flow.
+                  </span>
+                </div>
+                <div class="home-container37">
+                  <li class="list-item"></li>
+                  <span class="home-text064">
+                    Incorporate feedback from stakeholders and potential
+                    users.
+                  </span>
+                </div>
+                <div class="home-container38">
+                  <li class="list-item"></li>
+                  <span class="home-text065">
+                    Establish a design system for consistency across the
+                    product.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="home-step2">
+              <div class="home-container39">
+                <div class="home-line05"></div>
+                <div class="home-container40">
+                  <svg viewBox="0 0 1024 1024" class="home-icon06">
+                    <path d="M576 736l96 96 320-320-320-320-96 96 224 224z"></path>
+                    <path d="M448 288l-96-96-320 320 320 320 96-96-224-224z"></path>
+                  </svg>
+                </div>
+                <div class="home-line06"></div>
+              </div>
+              <div class="home-container41">
+                <h1 class="home-text066"><span>Develop</span></h1>
+                <div class="home-container42">
+                  <li class="list-item"></li>
+                  <span class="home-text068">
+                    <span>
+                      Write and review code according to coding standards.
+                    </span>
+                    <span></span>
+                  </span>
+                </div>
+                <div class="home-container43">
+                  <li class="list-item"></li>
+                  <span class="home-text071">
+                    Implement unit testing to ensure code quality.
+                  </span>
+                </div>
+                <div class="home-container44">
+                  <li class="list-item"></li>
+                  <span class="home-text072">
+                    Integrate different components of the system.
+                  </span>
+                </div>
+                <div class="home-container45">
+                  <li class="list-item"></li>
+                  <span class="home-text073">
+                    Regularly conduct code reviews for collaboration and
+                    quality assurance.
+                  </span>
+                </div>
+                <div class="home-container46">
+                  <li class="list-item"></li>
+                  <span class="home-text074">
+                    Continuously test and debug to identify and fix issues.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="home-container47">
+              <div class="home-step3">
+                <div class="home-container48">
+                  <div class="home-line07"></div>
+                  <div class="home-container49">
+                    <div class="home-container50">
+                      <div class="home-line08"></div>
+                    </div>
+                    <div class="home-container51">
+                      <svg viewBox="0 0 1024 1024" class="home-icon09">
+                        <path
+                          d="M480 64c-265.096 0-480 214.904-480 480 0 265.098 214.904 480 480 480 265.098 0 480-214.902 480-480 0-265.096-214.902-480-480-480zM751.59 704c8.58-40.454 13.996-83.392 15.758-128h127.446c-3.336 44.196-13.624 87.114-30.68 128h-112.524zM208.41 384c-8.58 40.454-13.996 83.392-15.758 128h-127.444c3.336-44.194 13.622-87.114 30.678-128h112.524zM686.036 384c9.614 40.962 15.398 83.854 17.28 128h-191.316v-128h174.036zM512 320v-187.338c14.59 4.246 29.044 11.37 43.228 21.37 26.582 18.74 52.012 47.608 73.54 83.486 14.882 24.802 27.752 52.416 38.496 82.484h-155.264zM331.232 237.516c21.528-35.878 46.956-64.748 73.54-83.486 14.182-10 28.638-17.124 43.228-21.37v187.34h-155.264c10.746-30.066 23.616-57.68 38.496-82.484zM448 384v128h-191.314c1.88-44.146 7.666-87.038 17.278-128h174.036zM95.888 704c-17.056-40.886-27.342-83.804-30.678-128h127.444c1.762 44.608 7.178 87.546 15.758 128h-112.524zM256.686 576h191.314v128h-174.036c-9.612-40.96-15.398-83.854-17.278-128zM448 768v187.34c-14.588-4.246-29.044-11.372-43.228-21.37-26.584-18.74-52.014-47.61-73.54-83.486-14.882-24.804-27.75-52.418-38.498-82.484h155.266zM628.768 850.484c-21.528 35.876-46.958 64.746-73.54 83.486-14.184 9.998-28.638 17.124-43.228 21.37v-187.34h155.266c-10.746 30.066-23.616 57.68-38.498 82.484zM512 704v-128h191.314c-1.88 44.146-7.666 87.040-17.28 128h-174.034zM767.348 512c-1.762-44.608-7.178-87.546-15.758-128h112.524c17.056 40.886 27.344 83.806 30.68 128h-127.446zM830.658 320h-95.9c-18.638-58.762-44.376-110.294-75.316-151.428 42.536 20.34 81.058 47.616 114.714 81.272 21.48 21.478 40.362 44.938 56.502 70.156zM185.844 249.844c33.658-33.658 72.18-60.932 114.714-81.272-30.942 41.134-56.676 92.666-75.316 151.428h-95.898c16.138-25.218 35.022-48.678 56.5-70.156zM129.344 768h95.898c18.64 58.762 44.376 110.294 75.318 151.43-42.536-20.34-81.058-47.616-114.714-81.274-21.48-21.478-40.364-44.938-56.502-70.156zM774.156 838.156c-33.656 33.658-72.18 60.934-114.714 81.274 30.942-41.134 56.678-92.668 75.316-151.43h95.9c-16.14 25.218-35.022 48.678-56.502 70.156z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="home-line09"></div>
+                </div>
+                <div class="home-container52">
+                  <h1 class="home-text075">
+                    <span>Deploy</span>
+                    <br />
+                  </h1>
+                  <div class="home-container53">
+                    <li class="list-item"></li>
+                    <span class="home-text078">
+                      Prepare for deployment by conducting thorough testing.
+                    </span>
+                  </div>
+                  <div class="home-container54">
+                    <li class="list-item"></li>
+                    <span class="home-text079">
+                      Create deployment plans and documentation.
+                    </span>
+                  </div>
+                  <div class="home-container55">
+                    <li class="list-item"></li>
+                    <span class="home-text080">
+                      Implement version control and release management.
+                    </span>
+                  </div>
+                  <div class="home-container56">
+                    <li class="list-item"></li>
+                    <span class="home-text081">
+                      Monitor system performance during and after deployment.
+                    </span>
+                  </div>
+                  <div class="home-container57">
+                    <li class="list-item"></li>
+                    <span class="home-text082">
+                      Provide training and support for end-users and
+                      stakeholders.
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="home-banner1">
+        <div class="home-container58">
+          <h1 class="home-text083">Subscribe to Our Newsletter</h1>
+          <span class="home-text084">
+            Get Updates from us via most informational Newsletter
+          </span>
+          <div class="home-container59">
+            <input type="text" placeholder="Email here..." class="home-textinput1 input" />
+            <button class="home-button2 button">Subscribe</button>
+          </div>
+        </div>
+        <img alt="image"
+          src="https://images.unsplash.com/photo-1495020689067-958852a7765e?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fG5ld3N8ZW58MHx8fHwxNzA4NTkxNzY1fDA&amp;ixlib=rb-4.0.3&amp;w=300"
+          class="home-image1" />
+      </div>
+      <div class="home-container60">
+        <footer class="home-footer">
+          <div class="home-container61">
+            <div class="home-logo">
+              <a href="https://navikonline.in" target="_blank" rel="noreferrer noopener" class="home-link5">
+                <img alt="logo" src="{% static 'assets/img/logo.png' %}" class="home-image2" />
+              </a>
+              <span class="home-text085">
+                Best Digital Solutions and Services at Your Fingertips
+              </span>
+            </div>
+            <div class="home-links-container">
+              <div class="home-container62">
+                <div class="home-product-container">
+                  <span class="home-text086">Courses</span>
+                  <span class="home-text087">CSF</span>
+                  <span class="home-text088">CSPY</span>
+                  <span class="home-text089">CSW</span>
+                  <span>CSAI</span>
+                </div>
+                <div class="home-company-container">
+                  <span class="home-text091">Company</span>
+                  <span class="home-text092">About</span>
+                  <span class="home-text093">Community</span>
+                  <span class="home-text094">Contact</span>
+                  <span>Blog</span>
+                </div>
+              </div>
+              <div class="home-container63">
+                <div class="home-contact">
+                  <span class="home-text096">Contact Us</span>
+                  <span class="home-text097"><a href="mailto:info@navikonline.in">info@navikonline.in</a></span>
+                  <span class="home-text097">Beeramguda, Hyderabad, Telangana.</span>
 
-          <!-- Slide 2 -->
-          <!-- <div class="carousel-item" style="background-image: url(/img/slide/slide-2.jpg)">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated fanimate__adeInDown">My <span>WORK</span></h2>
-                <p class="animate__animated animate__fadeInUp">Content Writing, Software Development & Testing, Graphic Design, Data Science, Machine Learning, Artificial Intelligence</p>
-                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                  <span>+91 9100529687</span>
+                </div>
+                <div class="home-socials">
+                  <span class="home-text099">Follow Us</span>
+                  <div class="home-icon-group">
+                    <svg viewBox="0 0 950.8571428571428 1024" class="home-icon11">
+                      <path
+                        d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z">
+                      </path>
+                    </svg><svg viewBox="0 0 877.7142857142857 1024" class="home-icon13">
+                      <path
+                        d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z">
+                      </path>
+                    </svg><svg viewBox="0 0 602.2582857142856 1024" class="home-icon15">
+                      <path
+                        d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z">
+                      </path>
+                    </svg><svg viewBox="0 0 877.7142857142857 1024" class="home-icon17">
+                      <path
+                        d="M199.429 357.143v566.286h-188.571v-566.286h188.571zM211.429 182.286c0.571 54.286-40.571 97.714-106.286 97.714v0h-1.143c-63.429 0-104-43.429-104-97.714 0-55.429 42.286-97.714 106.286-97.714 64.571 0 104.571 42.286 105.143 97.714zM877.714 598.857v324.571h-188v-302.857c0-76-27.429-128-95.429-128-52 0-82.857 34.857-96.571 68.571-4.571 12.571-6.286 29.143-6.286 46.286v316h-188c2.286-513.143 0-566.286 0-566.286h188v82.286h-1.143c24.571-38.857 69.143-95.429 170.857-95.429 124 0 216.571 81.143 216.571 254.857z">
+                      </path>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
-          </div> -->
-
-          <!-- Slide 3 -->
-          <!-- <div class="carousel-item" style="background-image: url(/img/slide/slide-3.jpg)">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Sequi ea <span>Dime Lara</span></h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-              </div>
-            </div>
-          </div> -->
-
-        </div>
-
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
-
+          </div>
+          <div class="home-separator"></div>
+          <span class="home-text100">
+            © 2021-2024 NavikOnline, All Rights Reserved.
+          </span>
+        </footer>
       </div>
     </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= Featured Section ======= -->
-    <section id="featured" class="featured">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="icon-box">
-              <i class="bi bi-card-checklist"></i>
-              <h3><a href="">{{feature1.name}}</a></h3>
-              <p>{{feature1.details}}</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <i class="bi bi-bar-chart"></i>
-              <h3><a href="">{{feature2.name}}</a></h3>
-              <p>{{feature2.details}}</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <i class="bi bi-binoculars"></i>
-              <h3><a href="">{{feature3.name}}</a></h3>
-              <p>{{feature3.details}}</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Featured Section -->
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content">
-            <h3>About</h3>
-            <p class="fst-italic">
-              My Skills
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Website Design & Development</li>
-              <li><i class="bi bi-check-circle"></i> Graphic Designing</li>
-              <li><i class="bi bi-check-circle"></i> Software Development</li>
-              <li><i class="bi bi-check-circle"></i> UI/UX Design</li>
-              <li><i class="bi bi-check-circle"></i> Branding and Logo Design</li>
-              <li><i class="bi bi-check-circle"></i> User Testing and Feedback</li>
-              <li><i class="bi bi-check-circle"></i> Content Creation</li>
-              <li><i class="bi bi-check-circle"></i> Video Editing</li>
-              <li><i class="bi bi-check-circle"></i> Digital Marketing Strategy</li>
-
-
-            </ul>
-            <p>
-              For More information, check below.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- End About Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-99designs"></i></div>
-              <h4><a href="">Graphic Designing</a></h4>
-              <p>Provide All kinds of Graphic Design works like Brochure Design, Flyer Design, Logo Design, etc., for
-                Marketing. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-desktop"></i></div>
-              <h4><a href="">Website Design & Development</a></h4>
-              <p>Provide a Digital Presence by Website Design and Development for Small Businesses, Individuals. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dev-to"></i></div>
-              <h4><a href="">Software Development</a></h4>
-              <p>Provide Software Development Services for Businesses at an affordable price. </p>
-            </div>
-          </div>
-        </div> <!-- Close the first row here -->
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-99designs"></i></div>
-              <h4><a href="">UI/UX Design</a></h4>
-              <p>Provide an intuitive UI/UX Design service for Small Businesses and Individuals.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-99designs"></i></div>
-              <h4><a href="">Branding and Logo Design</a></h4>
-              <p>Provide Online Branding for your business with my LOGO Design Services. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-user"></i></div>
-              <h4><a href="">User Testing and Feedback</a></h4>
-              <p>Testing your business software applications and Provide a detailed feedback report.</p>
-            </div>
-          </div>
-        </div> <!-- Close the second row here -->
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-blogger"></i></div>
-              <h4><a href="">Content Creation</a></h4>
-              <p>Provide digital content for your blogs, articles, websites with my research based service. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-photo-album"></i></div>
-              <h4><a href="">Photo/Video Editing</a></h4>
-              <p>Professional Photo/Video Editing services for Businesses, Individuals in Marketing Campaigns or Events.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxs-business"></i></div>
-              <h4><a href="">Digital Marketing Strategy</a></h4>
-              <p>Provide Digital Marketing Strategies, Social Media Marketing and Management for your Businesses.</p>
-            </div>
-          </div>
-        </div> <!-- Close the third row here -->
-      </div>
-
-    </section>
-
-    <!-- End Services Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Clients</h2>
-          <p>My Happy Clients</p>
-        </div>
-
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/SAKASI-1.png' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/shyam_testimonial.png' %}" class="img-fluid" alt=""></div>
-            <!-- <div class="swiper-slide"><img src="/img/clients/client-2.png" class="img-fluid" alt=""></div> 
-            <div class="swiper-slide"><img src="/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="/img/clients/client-8.png" class="img-fluid" alt=""></div> -->
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- End Clients Section-->
-
-  </main>
-
-  <!-- #End main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>My Newsletter</h4>
-            <p>Subscribe to my news letter for More Updates</p>
-          </div>
-          <div class="col-lg-6">
-            <form action="{% url 'subscribe' %}" method="post">
-              {% csrf_token %}
-              <input type="email" name="email">
-              <input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About Me</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">My Skills</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'Templates' %}">My Projects</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'termsandconditions' %}">Terms & Conditions</a>
-              </li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacypolicy' %}">Privacy policy</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="{% url 'refundpolicy' %}">Refund policy</a></li> -->
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>My Skills</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Website Design & Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Designing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Software Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">UI/UX Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Branding and Logo Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">User Testing and Feedback</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Content Creation</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Video Editing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Digital Marketing Strategy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Me</h4>
-            <p>
-              Beeramguda<br>
-              Hyderabad<br>
-              Telangana<br><br>
-              <strong>Email:</strong> info@navikonline.in<br>
-            </p>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>About Me</h3>
-            <p>NAVIKONLINE is my personal portfolio to showcase skills. Would you like to talk?</p>
-            <!-- <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div> -->
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Eterna</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ -->
-        Designed by <a href="#">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-
-  <!-- Template Main JS File -->
-  <script src="{% static 'assets/js/main.js'  %}"></script>
-
+  </div>
+  <script defer="" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
 </body>
 
 </html>

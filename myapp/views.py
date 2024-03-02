@@ -3,10 +3,16 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.http import require_GET
 from .models import *
 from django.core.paginator import Paginator
 from django.http import HttpResponse, Http404, HttpResponseRedirect, HttpResponseServerError
+from django.http import JsonResponse
+from django.utils import timezone
+from datetime import timedelta
+
+
 # from .forms import CustomPasswordResetForm
 import os
 # from payu import PayUmoneySdk
@@ -89,6 +95,8 @@ class pages:
     @staticmethod
     def contact(request):
         context = {}
+        if request.method == 'GET':
+            return render(request, 'pages/contact.html')
         try:
             if request.method == 'POST':
                 name = request.POST.get('name')
@@ -96,11 +104,14 @@ class pages:
                 subject = request.POST.get('subject')
                 message = request.POST.get('message')
                 c = Contact(name = name, email=email, subject= subject, message=message)
+                context = {'sent_message': 'Your message has been sent. Thank you!'}
                 c.save()
+                return render(request, 'pages/contact.html', context)
         except Exception as e:
             context['error_message'] = f'An error occurred: {str(e)}'
             return HttpResponseServerError('Internal Server Error')
-        return render(request, 'pages/contact.html', {'sent_message': 'Your message has been sent. Thank you!'})
+        
+        return HttpResponse('Invalid request')
     
     @staticmethod
     @login_required
@@ -132,6 +143,18 @@ class pages:
     def refundpolicy(request):
         return render(request, 'pages/refund_policy.html')
     
+    @require_GET
+    @ensure_csrf_cookie
+    def analytics_view(request):
+        # Fetch and process analytics data
+        # You can use the data from the analytics package or your own custom logic
+
+        # Example: Get the number of logins in the last 7 days
+        # Replace this with your actual analytics data retrieval logic
+        analytics_data = {
+            'logins_last_week': User.objects.filter(last_login__gte=(timezone.now() - timedelta(days=7))).count()
+        }
+        return JsonResponse(analytics_data)
     # @staticmethod
     # @login_required
     # def dashboard(request):
@@ -140,7 +163,7 @@ class pages:
 
 #==========================================================================
 
-class login_functionality(pages):
+class login_functionality(pages):   
     @staticmethod
     def register(request):
         if request.method == 'POST':

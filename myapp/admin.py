@@ -1,9 +1,22 @@
 from django.contrib import admin
 from .models import Feature,Category,Post, Comment, Contact, FilesAdmin
 
- 
+
+
+
+
+
+
+# # Unregister your User model
+# admin.site.unregister(User)
 # Register your models here.
 
+
+
+
+class CustomUserAdmin(admin.ModelAdmin):
+    list_display = ('username', 'email', 'last_login')
+    
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'is_published', 'posted_at')

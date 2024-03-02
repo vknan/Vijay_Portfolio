@@ -166,9 +166,9 @@
           <div class="col-lg-6">
             <form action='{% url "contact" %}' method="POST" role="form" class="php-email-form">
               {% csrf_token %}
-              <!-- <div>
+              <div>
                 {{ form.as_p }}
-              </div> -->
+              </div>
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
