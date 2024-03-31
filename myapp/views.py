@@ -30,7 +30,10 @@ class pages:
             'products': products
         }
         return render(request, 'pages/index.html', context)
-
+   
+    @staticmethod
+    def post_CSF(request):
+        return render(request, 'pages/post.html')
     # def password_reset(request):
     #     form = CustomPasswordResetForm()
     #     return render(request, 'templates/users/password_reset.html', {'form': form})

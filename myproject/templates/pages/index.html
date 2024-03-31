@@ -8,10 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
   <meta property="twitter:card" content="summary_large_image" />
+
   <!-- Favicons -->
   <link href="{% static 'assets/img/favicon.png' %}" rel="icon" />
   <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
-
   <style data-tag="reset-style-sheet">
     html {
       line-height: 1.15;
@@ -123,6 +123,36 @@
     }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+  <link rel="shortcut icon" href="public/design1.png" type="icon/png" sizes="32x32" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+  <style>
+    [data-thq="thq-dropdown"]:hover>[data-thq="thq-dropdown-list"] {
+      display: flex;
+    }
+
+    [data-thq="thq-dropdown"]:hover>div [data-thq="thq-dropdown-arrow"] {
+      transform: rotate(90deg);
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
   <link rel="shortcut icon" href="{% static 'assets/img/logo.png' %}" type="icon/png" sizes="32x32" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
@@ -143,15 +173,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
     data-tag="font" />
   <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
-  <!-- <style>
-    [data-thq="thq-dropdown"]:hover>[data-thq="thq-dropdown-list"] {
-      display: flex;
-    }
 
-    [data-thq="thq-dropdown"]:hover>div [data-thq="thq-dropdown-arrow"] {
-      transform: rotate(90deg);
-    }
-  </style> -->
 </head>
 
 <body>
@@ -175,25 +197,34 @@
       <div class="home-container03">
         <div class="home-container04">
           <!-- <div data-thq="thq-dropdown" class="home-thq-dropdown list-item">
-            <ul data-thq="thq-dropdown-list" class="home-dropdown-list">
-              <li data-thq="thq-dropdown" class="home-dropdown list-item">
-                <div data-thq="thq-dropdown-toggle" class="home-dropdown-toggle">
-                  <span class="home-text001">Sub-menu Item</span>
-                </div>
-              </li>
-              <li data-thq="thq-dropdown" class="home-dropdown1 list-item">
-                <div data-thq="thq-dropdown-toggle" class="home-dropdown-toggle1">
-                  <span class="home-text002">Sub-menu Item</span>
-                </div>
-              </li>
-              <li data-thq="thq-dropdown" class="home-dropdown2 list-item">
-                <div data-thq="thq-dropdown-toggle" class="home-dropdown-toggle2">
-                  <span class="home-text003">Sub-menu Item</span>
-                </div>
-              </li>
-            </ul>
-          </div> -->
-          <a href="https://navikonline.in"  rel="noreferrer noopener" class="home-link">
+              <ul data-thq="thq-dropdown-list" class="home-dropdown-list">
+                <li data-thq="thq-dropdown" class="home-dropdown list-item">
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="home-dropdown-toggle"
+                  >
+                    <span class="home-text001">Sub-menu Item</span>
+                  </div>
+                </li>
+                <li data-thq="thq-dropdown" class="home-dropdown1 list-item">
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="home-dropdown-toggle1"
+                  >
+                    <span class="home-text002">Sub-menu Item</span>
+                  </div>
+                </li>
+                <li data-thq="thq-dropdown" class="home-dropdown2 list-item">
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="home-dropdown-toggle2"
+                  >
+                    <span class="home-text003">Sub-menu Item</span>
+                  </div>
+                </li>
+              </ul>
+            </div> -->
+          <a href="/" rel="noreferrer noopener" class="home-link">
             <img alt="image" src="{% static 'assets/img/logo.png' %}" class="home-image" />
           </a>
         </div>
@@ -201,14 +232,16 @@
           <a href="/" rel="noreferrer noopener" class="navigation-links-link">
             <span>Home</span>
           </a>
-          <a href="{% url 'about' %}" rel="noreferrer noopener" class="navigation-links-link1">
-            <span>About</span>
-          </a>
-          <a href="https://example.com" rel="noreferrer noopener" class="navigation-links-link2">
+          <a href="#courses" onclick="scrollToSection('courses')" rel="noreferrer noopener"
+            class="navigation-links-link2">
             <span>Courses</span>
           </a>
-          <a href="https://example.com" rel="noreferrer noopener" class="navigation-links-link3">
-            <span>Community</span>
+          <a href="#about" onclick="scrollToSection('about')" rel="noreferrer noopener" class="navigation-links-link1">
+            <span>About</span>
+          </a>
+          
+          {% comment %} <a href="https://example.com" rel="noreferrer noopener" class="navigation-links-link3">
+            <span>Community</span> {% endcomment %}
           </a>
           <a href="{% url 'blog' %}" rel="noreferrer noopener" class="navigation-links-link4">
             <span>Blog</span>
@@ -232,13 +265,13 @@
               <div class="home-container09">
                 <h1 class="home-text004">Learn Anytime, Anywhere!</h1>
               </div>
-              <span class="home-text005">
-                <span class="home-text006">Providing&nbsp;</span>
-                <span>Cutting-Edge</span>
-                <span>IT Solutions</span>
-                <br />
-              </span>
             </div>
+            <span class="home-text005">
+              <span>Providing Cutting-</span>
+              <br />
+              <span>Edge&nbsp;</span>
+              <span>IT Solutions</span>
+            </span>
             <div class="home-container10">
               <div class="home-container11">
                 <input type="text" placeholder="Search to learn something..." class="home-textinput input" />
@@ -250,9 +283,9 @@
           </div>
         </div>
         <lottie-player src="https://lottie.host/ea77eb96-9627-4ee4-bfd0-5bb299f341c3/TzCE7HFC48.json" loop="true"
-          hover="true" speed="1" autoplay="true" background="transparent" class="home-lottie-node"></lottie-player>
+          speed="1" autoplay="true" background="transparent" class="home-lottie-node"></lottie-player>
       </div>
-      <div class="home-container12">
+      <div class="home-container12" id="courses">
         <div class="home-container13">
           <h1 class="home-text010">Courses</h1>
         </div>
@@ -262,7 +295,7 @@
           <div class="home-container16">
             <div class="home-container17">
               <div class="home-container18">
-                <a href="https://www.example.com" rel="noreferrer noopener" class="home-link1">
+                <a href="{% url 'post_CSF' %}" rel="noreferrer noopener" class="home-link1">
                   <div class="home-feature-card">
                     <lottie-player src="https://lottie.host/a8811818-ae36-4e37-a403-6c136d1bb4fc/nhGwKa3kRV.json"
                       loop="true" speed="0.5" autoplay="true" background="transparent"
@@ -273,7 +306,7 @@
                     <span class="home-text012">
                       Learn the Solid Foundations of Computer Science at us
                     </span>
-                    <span class="home-text013">SEE MORE</span>
+                    <span class="home-text013"><a href="{% url 'post_CSF' %}">SEE MORE</a></span>
                   </div>
                 </a>
               </div>
@@ -324,79 +357,188 @@
           </div>
         </a>
       </div>
-      <div class="home-banner">
-        <h1 class="home-text023">Our Mission</h1>
-        <span class="home-text024">
-          <span>
-            <!-- <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-              volutpat turpis. Mauris luctus rutrum mi ut rhoncus. Integer in
-              dignissim tortor. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Sed non volutpat turpis. Mauris luctus rutrum
-              mi ut rhoncus. Integer in dignissim tortor. Sed non volutpat
-              turpis. Mauris luctus rutrum mi ut rhoncus. Integer in dignissim
-              ortor.
-            </span> -->
-            <span></span>
-          </span>
-        </span>
-        <span class="home-text028">
-          At Navikonline and IT Solutions, our mission is to revolutionize
-          education and drive digital excellence. We are dedicated to
-          providing an innovative and inclusive e-learning platform,
-          transcending boundaries to make knowledge universally accessible.
-          Simultaneously, we offer cutting-edge IT solutions, understanding
-          and addressing our clients' unique challenges, and guiding them
-          towards technological advancement. We aspire to foster continuous
-          learning, creativity, and critical thinking, empowering individuals
-          and organizations to thrive in an ever-evolving digital landscape
-          while delivering tailored IT solutions that enhance efficiency,
-          productivity, and competitiveness. Our commitment is to be the
-          catalyst for positive change, promoting holistic development through
-          education and technology integration.
-        </span>
-        <button class="home-button1 button">Read More</button>
+      <div class="home-banner" id="about">
+        <h1 class="home-text023">Our Commitment</h1>
+        <div class="home-container21">
+          <div class="home-container22">
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1629956044156-27896de7efa1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE4fHxudW1iZXIlMjAxfGVufDB8fHx8MTcwOTUzMzY0NHww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200"
+              class="home-image01" />
+            <span class="home-text024">
+              <span class="home-text025">
+                🚀 Welcome to Navikonline: Empowering Your Programming
+                Journey!
+              </span>
+              <br />
+              <span class="home-text027">
+                At Navikonline, we embark on a shared journey of exploration
+                and mastery in the vast universe of programming. Our
+                commitment is rooted in the belief that education is not just
+                a gateway to knowledge but a catalyst for transformation.
+              </span>
+            </span>
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1690683789978-3cf73960d650?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDh8fFBST0dSQU1NSU5HJTIwVU5JVkVSU0V8ZW58MHx8fHwxNzA5NTM0MTAwfDA&amp;ixlib=rb-4.0.3&amp;w=400"
+              class="home-image02" />
+          </div>
+          <div class="home-container23">
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1559757742-654d5da2eaab?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDR8fG51bWJlciUyMDF8ZW58MHx8fHwxNzA5NTMzNjQ0fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200"
+              class="home-image03" />
+            <span class="home-text028">
+              <span class="home-text029">👨‍💻 Our Programming Journey:</span>
+              <br />
+              <span class="home-text031">
+                As passionate programmers ourselves, we intimately understand
+                the exhilarating highs and occasional frustrations that come
+                with mastering the art of coding. We've walked the path of
+                late-night debugging, celebrated the joy of a flawless code
+                execution, and reveled in the endless possibilities that
+                programming offers. Navikonline is born out of this journey, a
+                platform where we strive to make your programming expedition
+                as enriching and enjoyable as ours.
+              </span>
+            </span>
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1564865878688-9a244444042a?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDV8fFBST0dSQU1NSU5HfGVufDB8fHx8MTcwOTUzNTExN3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=400"
+              class="home-image04" />
+          </div>
+        </div>
+        <div class="home-container24">
+          <div class="home-container25">
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1621440318357-3e3c94221a1c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fE5VTUJFUiUyMDN8ZW58MHx8fHwxNzA5NTM2Mjk4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200"
+              class="home-image05" />
+            <span class="home-text032">
+              <span class="home-text033">💡</span>
+              <span class="home-text034">Focusing on Fundamentals:</span>
+              <br />
+              <span>In the ever-evolving landscape of technology,</span>
+              <span>
+                strong foundations are paramount. Our courses are meticulously
+                curated, placing a significant emphasis on the fundamentals of
+                computer science. We believe that a solid understanding of the
+                basics serves as the bedrock for innovation and creativity in
+                programming. Whether you're just starting or seeking to deepen
+                your knowledge, our courses cater to a spectrum of learners,
+                ensuring a holistic and inclusive learning experience.
+              </span>
+            </span>
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1611264327630-8090373c8cef?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDU4fHxJTExVU1RSQVRJT058ZW58MHx8fHwxNzA5NTM2MTg4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=400"
+              class="home-image06" />
+          </div>
+          <div class="home-container26">
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1610072947120-8736bbfc56e1?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fE5VTUJFUiUyMDR8ZW58MHx8fHwxNzA5NTM3MDA0fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200"
+              class="home-image07" />
+            <span class="home-text038">
+              <span class="home-text039">
+                🌐 A Commitment to Accessibility:
+              </span>
+              <br />
+              <span>
+                Education should be accessible to everyone, irrespective of
+                background or geographical location. That's why we offer a
+                selection of four free programming courses, opening the doors
+                to learning for enthusiasts worldwide. Our commitment to
+                accessibility extends to creating an inclusive environment
+                where diverse perspectives thrive, fostering a community of
+                learners who inspire and support each other.
+              </span>
+            </span>
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1481622254766-0f0a35bf6e77?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE1fHxBQ0NFU1N8ZW58MHx8fHwxNzA5NTM4OTkxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=400"
+              class="home-image08" />
+          </div>
+        </div>
+        <div class="home-container27">
+          <div class="home-container28">
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1583506573326-f44ad9661e45?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDN8fE5VTUJFUiUyMDV8ZW58MHx8fHwxNzA5NTM4MDM0fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200"
+              class="home-image09" />
+            <span class="home-text042">
+              <span class="home-text043">🏆 Beyond Learning:</span>
+              <br class="home-text044" />
+              <span class="home-text045">
+                Certification and Premium Content:
+              </span>
+              <br />
+              <span>
+                While we provide free courses to ignite your learning journey,
+                we recognize the value of advanced features and
+                certifications. Our premium content is designed to elevate
+                your expertise, offering a pathway for those seeking in-depth
+                knowledge, industry-recognized certifications, and access to
+                advanced features that enhance your learning experience.
+              </span>
+            </span>
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDI4fHxCRVlPTkQlMjBMRUFSTklOR3xlbnwwfHx8fDE3MDk1MzgwODN8MA&amp;ixlib=rb-4.0.3&amp;w=400"
+              class="home-image10" />
+          </div>
+          <div class="home-container29">
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1640684518379-b1cae1002131?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDl8fE5VTUJFUiUyMDZ8ZW58MHx8fHwxNzA5NTM5MjY2fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=200"
+              class="home-image11" />
+            <span class="home-text048">
+              <span>
+                Join Navikonline, where we don't just teach programming; we
+                empower your journey to become a proficient and confident
+                programmer. Let's code the future together!
+              </span>
+              <br />
+              <br />
+              <span>🌐 Start your programming journey now at us</span>
+              <br />
+            </span>
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1621109246687-10ae613f2d8e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE2fHxJTExVU1RSQVRJT058ZW58MHx8fHwxNzA5NTM0MzY5fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=500"
+              class="home-image12" />
+          </div>
+        </div>
       </div>
+      <div class="home-testimonial"></div>
       <div class="home-stats">
         <div class="home-stat">
-          <h1 class="home-text029">3+</h1>
-          <span class="home-text030">Happy clients</span>
-          <span class="home-text031">We Value Our Clients Satisfaction.</span>
+          <h1 class="home-text054">3+</h1>
+          <span class="home-text055">Happy clients</span>
+          <span class="home-text056">We Value Our Clients Satisfaction.</span>
         </div>
         <div class="home-stat1">
-          <h1 class="home-text032">16</h1>
-          <span class="home-text033">Projects completed</span>
-          <span class="home-text034">in total</span>
+          <h1 class="home-text057">16</h1>
+          <span class="home-text058">Projects completed</span>
+          <span class="home-text059">in total</span>
         </div>
         <div class="home-stat2">
-          <h1 class="home-text035">
+          <h1 class="home-text060">
             <span>5</span>
             <span>+</span>
           </h1>
-          <span class="home-text038">Years</span>
-          <span class="home-text039">
+          <span class="home-text063">Years</span>
+          <span class="home-text064">
             Of Experience in GIS, Machine Learning, Web Development.
           </span>
         </div>
         <div class="home-stat3">
-          <h1 class="home-text040"><span>24/7</span></h1>
-          <span class="home-text042">Support</span>
-          <span class="home-text043">We are available for your queries.</span>
+          <h1 class="home-text065"><span>24/7</span></h1>
+          <span class="home-text067">Support</span>
+          <span class="home-text068">We are available for your queries.</span>
         </div>
       </div>
-      <div class="home-container21">
+      <div class="home-container30">
         <div class="home-steps">
-          <h1 class="home-text044">Our 4 Stage Process</h1>
-          <span class="home-text045">
+          <h1 class="home-text069">Our 4 Stage Process</h1>
+          <span class="home-text070">
             <span>We Build Tech for Future</span>
             <br />
           </span>
-          <div class="home-container22">
+          <div class="home-container31">
             <div class="home-step">
-              <div class="home-container23">
+              <div class="home-container32">
                 <div class="home-line"></div>
                 <div class="home-line01"></div>
-                <div class="home-container24">
+                <div class="home-container33">
                   <svg viewBox="0 0 1024 1024" class="home-icon02">
                     <path
                       d="M634 558q92-64 92-174 0-88-63-151t-151-63-151 63-63 151q0 46 27 96t65 78l36 26v98h172v-98zM512 86q124 0 211 87t87 211q0 156-128 244v98q0 18-12 30t-30 12h-256q-18 0-30-12t-12-30v-98q-128-88-128-244 0-124 87-211t211-87zM384 896v-42h256v42q0 18-12 30t-30 12h-172q-18 0-30-12t-12-30z">
@@ -405,35 +547,35 @@
                 </div>
                 <div class="home-line02"></div>
               </div>
-              <div class="home-container25">
-                <h1 class="home-text048"><span>Ideate</span></h1>
-                <div class="home-container26">
+              <div class="home-container34">
+                <h1 class="home-text073"><span>Ideate</span></h1>
+                <div class="home-container35">
                   <li class="list-item"></li>
-                  <span class="home-text050">
+                  <span class="home-text075">
                     Conduct market research to identify trends and user needs.
                   </span>
                 </div>
-                <div class="home-container27">
+                <div class="home-container36">
                   <li class="list-item"></li>
-                  <span class="home-text051">
+                  <span class="home-text076">
                     Brainstorming sessions to generate creative ideas.
                   </span>
                 </div>
-                <div class="home-container28">
+                <div class="home-container37">
                   <li class="list-item"></li>
-                  <span class="home-text052">
+                  <span class="home-text077">
                     Define the problem statement and set clear objectives.
                   </span>
                 </div>
-                <div class="home-container29">
+                <div class="home-container38">
                   <li class="list-item"></li>
-                  <span class="home-text053">
+                  <span class="home-text078">
                     Prioritize and select the most viable ideas.
                   </span>
                 </div>
-                <div class="home-container30">
+                <div class="home-container39">
                   <li class="list-item"></li>
-                  <span class="home-text054">
+                  <span class="home-text079">
                     Create rough prototypes or concepts to visualize potential
                     solutions.
                   </span>
@@ -444,9 +586,9 @@
               </div>
             </div>
             <div class="home-step1">
-              <div class="home-container31">
+              <div class="home-container40">
                 <div class="home-line03"></div>
-                <div class="home-container32">
+                <div class="home-container41">
                   <svg viewBox="0 0 1024 1024" class="home-icon04">
                     <path
                       d="M746 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM618 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM406 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM278 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 128q158 0 271 100t113 242q0 88-63 150t-151 62h-74q-28 0-46 19t-18 45q0 22 16 42t16 44q0 28-18 46t-46 18q-160 0-272-112t-112-272 112-272 272-112z">
@@ -455,11 +597,11 @@
                 </div>
                 <div class="home-line04"></div>
               </div>
-              <div class="home-container33">
-                <h1 class="home-text055"><span>Design</span></h1>
-                <div class="home-container34">
+              <div class="home-container42">
+                <h1 class="home-text080"><span>Design</span></h1>
+                <div class="home-container43">
                   <li class="list-item"></li>
-                  <span class="home-text057">
+                  <span class="home-text082">
                     <span>
                       Develop detailed user personas to understand the target
                       audience.
@@ -467,9 +609,9 @@
                     <span></span>
                   </span>
                 </div>
-                <div class="home-container35">
+                <div class="home-container44">
                   <li class="list-item"></li>
-                  <span class="home-text060">
+                  <span class="home-text085">
                     <span>
                       Create wireframes and mockups to illustrate the user
                       interface.
@@ -477,22 +619,22 @@
                     <br />
                   </span>
                 </div>
-                <div class="home-container36">
+                <div class="home-container45">
                   <li class="list-item"></li>
-                  <span class="home-text063">
+                  <span class="home-text088">
                     Define the information architecture and navigation flow.
                   </span>
                 </div>
-                <div class="home-container37">
+                <div class="home-container46">
                   <li class="list-item"></li>
-                  <span class="home-text064">
+                  <span class="home-text089">
                     Incorporate feedback from stakeholders and potential
                     users.
                   </span>
                 </div>
-                <div class="home-container38">
+                <div class="home-container47">
                   <li class="list-item"></li>
-                  <span class="home-text065">
+                  <span class="home-text090">
                     Establish a design system for consistency across the
                     product.
                   </span>
@@ -500,9 +642,9 @@
               </div>
             </div>
             <div class="home-step2">
-              <div class="home-container39">
+              <div class="home-container48">
                 <div class="home-line05"></div>
-                <div class="home-container40">
+                <div class="home-container49">
                   <svg viewBox="0 0 1024 1024" class="home-icon06">
                     <path d="M576 736l96 96 320-320-320-320-96 96 224 224z"></path>
                     <path d="M448 288l-96-96-320 320 320 320 96-96-224-224z"></path>
@@ -510,53 +652,53 @@
                 </div>
                 <div class="home-line06"></div>
               </div>
-              <div class="home-container41">
-                <h1 class="home-text066"><span>Develop</span></h1>
-                <div class="home-container42">
+              <div class="home-container50">
+                <h1 class="home-text091"><span>Develop</span></h1>
+                <div class="home-container51">
                   <li class="list-item"></li>
-                  <span class="home-text068">
+                  <span class="home-text093">
                     <span>
                       Write and review code according to coding standards.
                     </span>
                     <span></span>
                   </span>
                 </div>
-                <div class="home-container43">
+                <div class="home-container52">
                   <li class="list-item"></li>
-                  <span class="home-text071">
+                  <span class="home-text096">
                     Implement unit testing to ensure code quality.
                   </span>
                 </div>
-                <div class="home-container44">
+                <div class="home-container53">
                   <li class="list-item"></li>
-                  <span class="home-text072">
+                  <span class="home-text097">
                     Integrate different components of the system.
                   </span>
                 </div>
-                <div class="home-container45">
+                <div class="home-container54">
                   <li class="list-item"></li>
-                  <span class="home-text073">
+                  <span class="home-text098">
                     Regularly conduct code reviews for collaboration and
                     quality assurance.
                   </span>
                 </div>
-                <div class="home-container46">
+                <div class="home-container55">
                   <li class="list-item"></li>
-                  <span class="home-text074">
+                  <span class="home-text099">
                     Continuously test and debug to identify and fix issues.
                   </span>
                 </div>
               </div>
             </div>
-            <div class="home-container47">
+            <div class="home-container56">
               <div class="home-step3">
-                <div class="home-container48">
+                <div class="home-container57">
                   <div class="home-line07"></div>
-                  <div class="home-container49">
-                    <div class="home-container50">
+                  <div class="home-container58">
+                    <div class="home-container59">
                       <div class="home-line08"></div>
                     </div>
-                    <div class="home-container51">
+                    <div class="home-container60">
                       <svg viewBox="0 0 1024 1024" class="home-icon09">
                         <path
                           d="M480 64c-265.096 0-480 214.904-480 480 0 265.098 214.904 480 480 480 265.098 0 480-214.902 480-480 0-265.096-214.902-480-480-480zM751.59 704c8.58-40.454 13.996-83.392 15.758-128h127.446c-3.336 44.196-13.624 87.114-30.68 128h-112.524zM208.41 384c-8.58 40.454-13.996 83.392-15.758 128h-127.444c3.336-44.194 13.622-87.114 30.678-128h112.524zM686.036 384c9.614 40.962 15.398 83.854 17.28 128h-191.316v-128h174.036zM512 320v-187.338c14.59 4.246 29.044 11.37 43.228 21.37 26.582 18.74 52.012 47.608 73.54 83.486 14.882 24.802 27.752 52.416 38.496 82.484h-155.264zM331.232 237.516c21.528-35.878 46.956-64.748 73.54-83.486 14.182-10 28.638-17.124 43.228-21.37v187.34h-155.264c10.746-30.066 23.616-57.68 38.496-82.484zM448 384v128h-191.314c1.88-44.146 7.666-87.038 17.278-128h174.036zM95.888 704c-17.056-40.886-27.342-83.804-30.678-128h127.444c1.762 44.608 7.178 87.546 15.758 128h-112.524zM256.686 576h191.314v128h-174.036c-9.612-40.96-15.398-83.854-17.278-128zM448 768v187.34c-14.588-4.246-29.044-11.372-43.228-21.37-26.584-18.74-52.014-47.61-73.54-83.486-14.882-24.804-27.75-52.418-38.498-82.484h155.266zM628.768 850.484c-21.528 35.876-46.958 64.746-73.54 83.486-14.184 9.998-28.638 17.124-43.228 21.37v-187.34h155.266c-10.746 30.066-23.616 57.68-38.498 82.484zM512 704v-128h191.314c-1.88 44.146-7.666 87.040-17.28 128h-174.034zM767.348 512c-1.762-44.608-7.178-87.546-15.758-128h112.524c17.056 40.886 27.344 83.806 30.68 128h-127.446zM830.658 320h-95.9c-18.638-58.762-44.376-110.294-75.316-151.428 42.536 20.34 81.058 47.616 114.714 81.272 21.48 21.478 40.362 44.938 56.502 70.156zM185.844 249.844c33.658-33.658 72.18-60.932 114.714-81.272-30.942 41.134-56.676 92.666-75.316 151.428h-95.898c16.138-25.218 35.022-48.678 56.5-70.156zM129.344 768h95.898c18.64 58.762 44.376 110.294 75.318 151.43-42.536-20.34-81.058-47.616-114.714-81.274-21.48-21.478-40.364-44.938-56.502-70.156zM774.156 838.156c-33.656 33.658-72.18 60.934-114.714 81.274 30.942-41.134 56.678-92.668 75.316-151.43h95.9c-16.14 25.218-35.022 48.678-56.502 70.156z">
@@ -566,38 +708,38 @@
                   </div>
                   <div class="home-line09"></div>
                 </div>
-                <div class="home-container52">
-                  <h1 class="home-text075">
+                <div class="home-container61">
+                  <h1 class="home-text100">
                     <span>Deploy</span>
                     <br />
                   </h1>
-                  <div class="home-container53">
+                  <div class="home-container62">
                     <li class="list-item"></li>
-                    <span class="home-text078">
+                    <span class="home-text103">
                       Prepare for deployment by conducting thorough testing.
                     </span>
                   </div>
-                  <div class="home-container54">
+                  <div class="home-container63">
                     <li class="list-item"></li>
-                    <span class="home-text079">
+                    <span class="home-text104">
                       Create deployment plans and documentation.
                     </span>
                   </div>
-                  <div class="home-container55">
+                  <div class="home-container64">
                     <li class="list-item"></li>
-                    <span class="home-text080">
+                    <span class="home-text105">
                       Implement version control and release management.
                     </span>
                   </div>
-                  <div class="home-container56">
+                  <div class="home-container65">
                     <li class="list-item"></li>
-                    <span class="home-text081">
+                    <span class="home-text106">
                       Monitor system performance during and after deployment.
                     </span>
                   </div>
-                  <div class="home-container57">
+                  <div class="home-container66">
                     <li class="list-item"></li>
-                    <span class="home-text082">
+                    <span class="home-text107">
                       Provide training and support for end-users and
                       stakeholders.
                     </span>
@@ -609,90 +751,103 @@
         </div>
       </div>
       <div class="home-banner1">
-        <div class="home-container58">
-          <h1 class="home-text083">Subscribe to Our Newsletter</h1>
-          <span class="home-text084">
+        <div class="home-container67">
+          <h1 class="home-text108">Subscribe to Our Newsletter</h1>
+          <span class="home-text109">
             Get Updates from us via most informational Newsletter
           </span>
-          <div class="home-container59">
+          <div class="home-container68">
             <input type="text" placeholder="Email here..." class="home-textinput1 input" />
-            <button class="home-button2 button">Subscribe</button>
+            <button class="home-button1 button">Subscribe</button>
           </div>
         </div>
         <img alt="image"
           src="https://images.unsplash.com/photo-1495020689067-958852a7765e?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fG5ld3N8ZW58MHx8fHwxNzA4NTkxNzY1fDA&amp;ixlib=rb-4.0.3&amp;w=300"
-          class="home-image1" />
+          class="home-image13" />
       </div>
-      <div class="home-container60">
-        <footer class="home-footer">
-          <div class="home-container61">
-            <div class="home-logo">
-              <a href="https://navikonline.in" target="_blank" rel="noreferrer noopener" class="home-link5">
-                <img alt="logo" src="{% static 'assets/img/logo.png' %}" class="home-image2" />
-              </a>
-              <span class="home-text085">
-                Best Digital Solutions and Services at Your Fingertips
-              </span>
-            </div>
-            <div class="home-links-container">
-              <div class="home-container62">
-                <div class="home-product-container">
-                  <span class="home-text086">Courses</span>
-                  <span class="home-text087">CSF</span>
-                  <span class="home-text088">CSPY</span>
-                  <span class="home-text089">CSW</span>
-                  <span>CSAI</span>
-                </div>
-                <div class="home-company-container">
-                  <span class="home-text091">Company</span>
-                  <span class="home-text092">About</span>
-                  <span class="home-text093">Community</span>
-                  <span class="home-text094">Contact</span>
-                  <span>Blog</span>
-                </div>
+      <div class="home-container69">
+        <div class="home-container70">
+          <footer class="home-footer">
+            <div class="home-container71">
+              <div class="home-logo">
+                <a href="https://navikonline.in" target="_blank" rel="noreferrer noopener" class="home-link5">
+                  <img alt="logo" src="{% static 'assets/img/logo.png' %}" class="home-image14" />
+                </a>
+                <span class="home-text110">
+                  Best Digital Solutions and Services at Your Fingertips
+                </span>
               </div>
-              <div class="home-container63">
-                <div class="home-contact">
-                  <span class="home-text096">Contact Us</span>
-                  <span class="home-text097"><a href="mailto:info@navikonline.in">info@navikonline.in</a></span>
-                  <span class="home-text097">Beeramguda, Hyderabad, Telangana.</span>
-
-                  <span>+91 9100529687</span>
+              <div class="home-links-container">
+                <div class="home-container72">
+                  <div class="home-product-container">
+                    <span class="home-text111">Courses</span>
+                    <span class="home-text112">CSF</span>
+                    <span class="home-text113">CSPY</span>
+                    <span class="home-text114">CSW</span>
+                    <span>CSAI</span>
+                  </div>
+                  <div class="home-company-container">
+                    <span class="home-text116">Company</span>
+                    <span class="home-text117"><a href="{% url 'home' %}">Home</a></span>
+                    <span class="home-text118"><a href="{% url 'blog' %}">Blog</a></span>
+                    <span class="home-text119"><a href="{% url 'contact' %}">Contact</a></span>
+                  </div>
                 </div>
-                <div class="home-socials">
-                  <span class="home-text099">Follow Us</span>
-                  <div class="home-icon-group">
-                    <svg viewBox="0 0 950.8571428571428 1024" class="home-icon11">
-                      <path
-                        d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z">
-                      </path>
-                    </svg><svg viewBox="0 0 877.7142857142857 1024" class="home-icon13">
-                      <path
-                        d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z">
-                      </path>
-                    </svg><svg viewBox="0 0 602.2582857142856 1024" class="home-icon15">
-                      <path
-                        d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z">
-                      </path>
-                    </svg><svg viewBox="0 0 877.7142857142857 1024" class="home-icon17">
-                      <path
-                        d="M199.429 357.143v566.286h-188.571v-566.286h188.571zM211.429 182.286c0.571 54.286-40.571 97.714-106.286 97.714v0h-1.143c-63.429 0-104-43.429-104-97.714 0-55.429 42.286-97.714 106.286-97.714 64.571 0 104.571 42.286 105.143 97.714zM877.714 598.857v324.571h-188v-302.857c0-76-27.429-128-95.429-128-52 0-82.857 34.857-96.571 68.571-4.571 12.571-6.286 29.143-6.286 46.286v316h-188c2.286-513.143 0-566.286 0-566.286h188v82.286h-1.143c24.571-38.857 69.143-95.429 170.857-95.429 124 0 216.571 81.143 216.571 254.857z">
-                      </path>
-                    </svg>
+                <div class="home-container73">
+                  <div class="home-contact">
+                    <span class="home-text121">Contact</span>
+                    <span class="home-text122"><a href="mailto:info@navikonline.in">info@navikonline.in</a></span>
+                    <span class="home-text097">Beeramguda, Hyderabad, Telangana.</span>
+
+                    <span>+91 9100529687</span>
+                  </div>
+                  <div class="home-socials">
+                    <span class="home-text124">Follow Us</span>
+                    <div class="home-icon-group">
+                      <svg viewBox="0 0 950.8571428571428 1024" class="home-icon11">
+                        <path
+                          d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z">
+                        </path>
+                      </svg><svg viewBox="0 0 877.7142857142857 1024" class="home-icon13">
+                        <path
+                          d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z">
+                        </path>
+                      </svg><svg viewBox="0 0 602.2582857142856 1024" class="home-icon15">
+                        <path
+                          d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z">
+                        </path>
+                      </svg><svg viewBox="0 0 877.7142857142857 1024" class="home-icon17">
+                        <path
+                          d="M199.429 357.143v566.286h-188.571v-566.286h188.571zM211.429 182.286c0.571 54.286-40.571 97.714-106.286 97.714v0h-1.143c-63.429 0-104-43.429-104-97.714 0-55.429 42.286-97.714 106.286-97.714 64.571 0 104.571 42.286 105.143 97.714zM877.714 598.857v324.571h-188v-302.857c0-76-27.429-128-95.429-128-52 0-82.857 34.857-96.571 68.571-4.571 12.571-6.286 29.143-6.286 46.286v316h-188c2.286-513.143 0-566.286 0-566.286h188v82.286h-1.143c24.571-38.857 69.143-95.429 170.857-95.429 124 0 216.571 81.143 216.571 254.857z">
+                        </path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="home-separator"></div>
-          <span class="home-text100">
-            © 2021-2024 NavikOnline, All Rights Reserved.
-          </span>
-        </footer>
+            <div class="home-separator"></div>
+            <span class="home-text125">
+              © 2021-2024 NavikOnline, All Rights Reserved.
+            </span>
+          </footer>
+        </div>
       </div>
     </div>
   </div>
   <script defer="" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  <script>
+    function scrollToSection(sectionId) {
+      const targetSection = document.getElementById(sectionId);
+
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    }
+  </script>
 </body>
 
 </html>

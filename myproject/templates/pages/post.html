@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Science Fundamentals</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    iframe {
+      position: relative;
+      width: 100%;
+      height: 930px;
+      max-height: 100vh;
+      border: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
-    <h1>The value in url is {{title}}</h1>
+
+  <iframe id="externalIframe" loading="lazy" src="https://www.canva.com/design/DAF1dDy57ZA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+
+  <div id="contentContainer"></div>
+
+  <script>
+    // Wait for the iframe to fully load
+    const externalIframe = document.getElementById('externalIframe');
+    externalIframe.addEventListener('load', () => {
+      // Access the contentDocument property of the iframe
+      const iframeDocument = externalIframe.contentDocument;
+
+      // Check if the iframe document is accessible
+      if (iframeDocument) {
+        // Extract content or manipulate the DOM as needed
+        const extractedContent = iframeDocument.body.innerHTML;
+
+        // Display the content in a container on your page
+        const contentContainer = document.getElementById('contentContainer');
+        contentContainer.innerHTML = extractedContent;
+      } else {
+        console.error('Unable to access iframe content.');
+      }
+    });
+  </script>
 </body>
 </html>
