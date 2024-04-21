@@ -124,18 +124,12 @@
               </ul>
             </li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'customlogout' %}">Logout</a></li>
           </ul>
           {% else %}
           <ul>
             <li><a href="/">Home</a></li>
-            {% comment %}
-            <li><a href="{% url 'about' %}">About</a></li>
-            {% endcomment %}
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-            {% comment %}
-            <li><a href="{% url 'Templates' %}">My Projects</a></li>
-            {% endcomment %}
+
             <!-- <li><a href="team.html">Team</a></li> -->
             <!-- <li><a href="pricing.html">Pricing</a></li> -->
             <li>
@@ -170,9 +164,9 @@
                 <li><a href="#">Drop Down 4</a></li>
               </ul>
             </li> -->
-            {% comment %}
+
             <li><a href="{% url 'contact' %}">Contact</a></li>
-            {% endcomment %}
+
             <li><a href="{% url 'register' %}">Login/Register</a></li>
           </ul>
           {% endif %}

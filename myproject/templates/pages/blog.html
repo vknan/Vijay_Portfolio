@@ -82,15 +82,14 @@
                 {% endfor %}
               </ul>
             </li>
-            {% comment %} <li><a href="{% url 'Templates' %}">Courses</a></li> {% endcomment %}
+            
             <li><a href="{% url 'customlogout' %}">Logout</a></li>
           </ul>
           {% else %}
           <ul>
             <li><a href="/">Home</a></li>
-            {% comment %} <li><a href="#about" onclick="scrollToSection('about')" >About</a></li>
-            <li><a href="#courses" onclick="scrollToSection('courses')">Courses</a></li> {% endcomment %}
-            {% comment %} <li><a href="{% url 'Templates' %}">Community</a></li> {% endcomment %}
+            
+            <!-- <li><a href="community">Community</a></li> -->
             <!-- <li><a href="team.html">Team</a></li> -->
             <!-- <li><a href="pricing.html">Pricing</a></li> -->
             <li class="active dropdown">
