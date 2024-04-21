@@ -5,7 +5,7 @@ class newsletters:
     @staticmethod
     def subscribe(request):
         if request.method == 'POST':
-            email = request.POST.get('email')
+            email = request.POST['email']
             if email is not None:
                 existing_subscriber = Subscriber.objects.filter(email=email).first()
                 if existing_subscriber:

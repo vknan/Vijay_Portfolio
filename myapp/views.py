@@ -7,10 +7,10 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.http import require_GET
 from .models import *
 from django.core.paginator import Paginator
-from django.http import HttpResponse, Http404, HttpResponseRedirect, HttpResponseServerError
-from django.http import JsonResponse
-from django.utils import timezone
-from datetime import timedelta
+from django.http import HttpResponse, HttpResponseServerError
+# from django.http import JsonResponse
+# from django.utils import timezone
+# from datetime import timedelta
 
 
 # from .forms import CustomPasswordResetForm
@@ -21,15 +21,15 @@ import os
 class pages:
     @staticmethod
     def home(request):
-        features = Feature.objects.all()[:3]
-        products = Product.objects.all()
-        context = {
-            'feature1': features[0] if len(features) > 0 else None,
-            'feature2': features[1] if len(features) > 1 else None,
-            'feature3': features[2] if len(features) > 2 else None,
-            'products': products
-        }
-        return render(request, 'pages/index.html', context)
+        # features = Feature.objects.all()[:3]
+        # products = Product.objects.all()
+        # context = {
+        #     'feature1': features[0] if len(features) > 0 else None,
+        #     'feature2': features[1] if len(features) > 1 else None,
+        #     'feature3': features[2] if len(features) > 2 else None,
+        #     'products': products
+        # }
+        return render(request, 'pages/index.html')
    
     @staticmethod
     def post_CSF(request):
@@ -47,15 +47,15 @@ class pages:
     def about(request):
         return render(request, 'pages/about.html')
     
-    @staticmethod
-    def services(request):
-        return render(request, 'pages/services.html')
+    # @staticmethod
+    # def services(request):
+    #     return render(request, 'pages/services.html')
 
-    @staticmethod
-    def Templates(request):
-        p1 = Product.objects.all()
-        context = {'products': p1}
-        return render(request, 'pages/Templates.html', context)
+    # @staticmethod
+    # def Templates(request):
+    #     p1 = Product.objects.all()
+    #     context = {'products': p1}
+    #     return render(request, 'pages/Templates.html', context)
     
     @staticmethod
     def blog(request):
@@ -146,18 +146,18 @@ class pages:
     def refundpolicy(request):
         return render(request, 'pages/refund_policy.html')
     
-    @require_GET
-    @ensure_csrf_cookie
-    def analytics_view(request):
-        # Fetch and process analytics data
-        # You can use the data from the analytics package or your own custom logic
+    # @require_GET
+    # @ensure_csrf_cookie
+    # def analytics_view(request):
+    #     # Fetch and process analytics data
+    #     # You can use the data from the analytics package or your own custom logic
 
-        # Example: Get the number of logins in the last 7 days
-        # Replace this with your actual analytics data retrieval logic
-        analytics_data = {
-            'logins_last_week': User.objects.filter(last_login__gte=(timezone.now() - timedelta(days=7))).count()
-        }
-        return JsonResponse(analytics_data)
+    #     # Example: Get the number of logins in the last 7 days
+    #     # Replace this with your actual analytics data retrieval logic
+    #     analytics_data = {
+    #         'logins_last_week': User.objects.filter(last_login__gte=(timezone.now() - timedelta(days=7))).count()
+    #     }
+    #     return JsonResponse(analytics_data)
     # @staticmethod
     # @login_required
     # def dashboard(request):
@@ -192,7 +192,7 @@ class login_functionality(pages):
     @staticmethod
     def login(request):
         url = request.get_full_path()
-        print(url)
+        # print(url)
         if (request.method == 'POST') :
             username = request.POST['username']
             password = request.POST['password']
@@ -200,7 +200,7 @@ class login_functionality(pages):
 
             if user is not None:
                 auth.login(request, user)
-                customer, created = Customer.objects.get_or_create(user=user)
+                # customer, created = Customer.objects.get_or_create(user=user)
                 return redirect('home')
             else:
                 messages.info(request, 'Credentials Invalid')
@@ -212,7 +212,7 @@ class login_functionality(pages):
     @staticmethod
     def customlogout(request):
         auth.logout(request)
-        return redirect ('customlogout')
+        return redirect ('home')
         
 
 

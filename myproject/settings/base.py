@@ -16,7 +16,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+# print(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     "myapp",
     "django_ckeditor_5",
     "ckeditor",
-    "newsletters"
-    # 'django.contrib.sites',
+    "newsletters",
+    # "django.contrib.sites",
     # 'cms',
     # 'menus',
     # 'treebeard',
@@ -92,7 +92,7 @@ DATABASES = {
         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
     }
 }
-
+# print(DATABASES['default']['NAME'])
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

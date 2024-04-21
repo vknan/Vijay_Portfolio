@@ -173,13 +173,12 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
     data-tag="font" />
   <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
-
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+  <link href="{% static 'assets/css/index.css' %}" rel="stylesheet" />
 </head>
 
 <body>
-  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
   <div>
-    <link href="{% static 'assets/css/index.css' %}" rel="stylesheet" />
     <script type="text/javascript"
       src="https://unpkg.com/@lottiefiles/lottie-player@1.6.0/dist/lottie-player.js"></script>
 
@@ -228,6 +227,36 @@
             <img alt="image" src="{% static 'assets/img/logo.png' %}" class="home-image" />
           </a>
         </div>
+        {% if user.is_authenticated %}
+        <nav class="navigation-links-nav navigation-links-root-class-name19">
+          <a href="/" rel="noreferrer noopener" class="navigation-links-link">
+            <span>Home</span>
+          </a>
+          <a href="#courses" onclick="scrollToSection('courses')" rel="noreferrer noopener"
+            class="navigation-links-link2">
+            <span>Courses</span>
+          </a>
+          <a href="#about" onclick="scrollToSection('about')" rel="noreferrer noopener" class="navigation-links-link1">
+            <span>About</span>
+          </a>
+          
+          {% comment %} <a href="https://example.com" rel="noreferrer noopener" class="navigation-links-link3">
+            <span>Community</span> {% endcomment %}
+          </a>
+          <a href="{% url 'blog' %}" rel="noreferrer noopener" class="navigation-links-link4">
+            <span>Blog</span>
+          </a>
+          <a href="{% url 'contact' %}" rel="noreferrer noopener" class="navigation-links-link5">
+            <span>contact</span>
+          </a>
+          <a href="{% url 'customlogout' %}" rel="noreferrer noopener" class="navigation-links-link6">
+            <span>Logout</span>
+          </a>
+          <svg viewBox="0 0 1024 1024" class="navigation-links-icon">
+            <path d="M64 192h896v192h-896zM64 448h896v192h-896zM64 704h896v192h-896z"></path>
+          </svg>
+        </nav>
+        {% else %}
         <nav class="navigation-links-nav navigation-links-root-class-name19">
           <a href="/" rel="noreferrer noopener" class="navigation-links-link">
             <span>Home</span>
@@ -256,6 +285,7 @@
             <path d="M64 192h896v192h-896zM64 448h896v192h-896zM64 704h896v192h-896z"></path>
           </svg>
         </nav>
+        {% endif %}
       </div>
       <div class="home-container05"></div>
       <div class="home-hero">
@@ -756,9 +786,12 @@
           <span class="home-text109">
             Get Updates from us via most informational Newsletter
           </span>
-          <div class="home-container68">
-            <input type="text" placeholder="Email here..." class="home-textinput1 input" />
-            <button class="home-button1 button">Subscribe</button>
+          <div  class="home-container68">
+            <form action="{% url 'subscribe' %}" method="POST">
+              {% csrf_token %}
+              <input type="email"  name="email" placeholder="Email here..." class="home-textinput1 input" />
+              <button type="submit" class="home-button1 button" >Subscribe</button>
+             </form>
           </div>
         </div>
         <img alt="image"
@@ -774,7 +807,7 @@
                   <img alt="logo" src="{% static 'assets/img/logo.png' %}" class="home-image14" />
                 </a>
                 <span class="home-text110">
-                  Best Digital Solutions and Services at Your Fingertips
+                  Learn Anytime Anywhere & Providing Cutting Edge IT Solutions!
                 </span>
               </div>
               <div class="home-links-container">

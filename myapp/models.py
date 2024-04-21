@@ -11,14 +11,17 @@ class Article(models.Model):
     text=CKEditor5Field('Text', config_name='extends')
 
 
-class Feature(models.Model):
-    name = models.CharField(max_length = 100)
-    details = models.CharField(max_length =500)
+class Course(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    instructor = models.ForeignKey(User, on_delete=models.CASCADE)  # Assuming User model exists
+
     def __str__(self):
-        return self.name
+        return self.title
     class meta:
-        verbose_name = 'Feature'
-        verbose_name_plural = 'Features'
+        verbose_name = 'Course'
+        verbose_name_plural = 'Courses'
+    
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
@@ -86,89 +89,89 @@ class Contact(models.Model):
         verbose_name_plural = ('Contacts')
 
 
-class ProductCategory(models.Model):
-    name = models.CharField(max_length=255)
+# class ProductCategory(models.Model):
+#     name = models.CharField(max_length=255)
 
-    class Meta:
-        verbose_name = "Product Category"
-        verbose_name_plural = "Product Categories"
+#     class Meta:
+#         verbose_name = "Product Category"
+#         verbose_name_plural = "Product Categories"
 
-    def __str__(self):
-        return self.name
-
-
-class Product(models.Model):
-    name = models.CharField(max_length=255)
-    description = models.TextField()
-    price_actual = models.DecimalField(max_digits=10, decimal_places=2)
-    discounted_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    avg_rating = models.FloatField(default=0)
-    product_image = models.ImageField(upload_to='product_images/')
-    demo_link = models.URLField(null=True, blank=True)
-    product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
-    date_added = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        verbose_name = "Product"
-        verbose_name_plural = "Products"
-
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 
-class Customer(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null = False)
-    name = models.CharField(max_length=255)
-    email = models.EmailField(unique=True)
-    phone_number = models.CharField(max_length=20)
-    shipping_address = models.TextField()
-    payment_info = models.TextField()
+# class Product(models.Model):
+#     name = models.CharField(max_length=255)
+#     description = models.TextField()
+#     price_actual = models.DecimalField(max_digits=10, decimal_places=2)
+#     discounted_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+#     avg_rating = models.FloatField(default=0)
+#     product_image = models.ImageField(upload_to='product_images/')
+#     demo_link = models.URLField(null=True, blank=True)
+#     product_category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
+#     date_added = models.DateTimeField(auto_now_add=True)
 
-    class Meta:
-        verbose_name = "Customer"
-        verbose_name_plural = "Customers"
+#     class Meta:
+#         verbose_name = "Product"
+#         verbose_name_plural = "Products"
 
-    def __str__(self):
-        return self.name
-
-
-class OrderItem(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    ordered = models.BooleanField(default=False)
-    date_added = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        verbose_name = "Order Item"
-        verbose_name_plural = "Order Items"
-
-    def __str__(self):
-        return f"{self.product.name} - {self.customer.name}"
+#     def __str__(self):
+#         return self.name
 
 
-class Review(models.Model):
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    rating = models.DecimalField(max_digits=3, decimal_places=2)
-    comment = models.TextField()
+# class Customer(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE, null = False)
+#     name = models.CharField(max_length=255)
+#     email = models.EmailField(unique=True)
+#     phone_number = models.CharField(max_length=20)
+#     shipping_address = models.TextField()
+#     payment_info = models.TextField()
 
-    class Meta:
-        verbose_name = "Review"
-        verbose_name_plural = "Reviews"
+#     class Meta:
+#         verbose_name = "Customer"
+#         verbose_name_plural = "Customers"
 
-    def __str__(self):
-        return f"{self.customer} - {self.product}"
+#     def __str__(self):
+#         return self.name
+
+
+# class OrderItem(models.Model):
+#     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+#     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+#     ordered = models.BooleanField(default=False)
+#     date_added = models.DateTimeField(auto_now_add=True)
+
+#     class Meta:
+#         verbose_name = "Order Item"
+#         verbose_name_plural = "Order Items"
+
+#     def __str__(self):
+#         return f"{self.product.name} - {self.customer.name}"
+
+
+# class Review(models.Model):
+#     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+#     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+#     rating = models.DecimalField(max_digits=3, decimal_places=2)
+#     comment = models.TextField()
+
+#     class Meta:
+#         verbose_name = "Review"
+#         verbose_name_plural = "Reviews"
+
+#     def __str__(self):
+#         return f"{self.customer} - {self.product}"
 
 #-------------------------------------------------------------------
-class FilesAdmin(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
-    adminupload = models.FileField(upload_to='product_files/', default='default_file.pdf')
-    title = models.CharField(max_length=50, null=True)
-    class Meta:
-        verbose_name = "Files Admin"
-        verbose_name_plural = "Files Admin"
+# class FilesAdmin(models.Model):
+#     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
+#     adminupload = models.FileField(upload_to='product_files/', default='default_file.pdf')
+#     title = models.CharField(max_length=50, null=True)
+#     class Meta:
+#         verbose_name = "Files Admin"
+#         verbose_name_plural = "Files Admin"
 
-    def __str__(self):
-        if self.product:
-            return f"{self.product.name} - {self.adminupload.name}"
-        return f"FilesAdmin - {self.adminupload.name}"
+#     def __str__(self):
+#         if self.product:
+#             return f"{self.product.name} - {self.adminupload.name}"
+#         return f"FilesAdmin - {self.adminupload.name}"
